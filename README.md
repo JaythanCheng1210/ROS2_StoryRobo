@@ -17,12 +17,7 @@ git clone https://github.com/JaythanCheng1210/ROS2_StoryRobo.git
 ```
 ```
 sudo apt install python3-pip
-sudo pip3 install pigpio
-sudo pip3 install RPi.GPIO
-sudo pip3 install smbus2
-```
-```
-pip3 install setuptools==58.2.0
+sudo pip3 install Jetson.GPIO
 ```
 ### DynamixelSDK setup
 - cd /home/user: 
@@ -36,18 +31,14 @@ cd /DynamixlSDK/python && sudo python setup.py install
 
 - build: 
 ```
-colcon build --symlink-install
+colcon build
 ```
 
 
 ### Start
 ```
-ros2 launch pangolin_bringup pangolin_bringup.launch.py
+
 ```
 
-
-### Record
-* #### LB: start(first pressed) & stop(second pressed) record
-* #### RB: repaly 
 
 

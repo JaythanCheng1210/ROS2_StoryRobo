@@ -10,8 +10,8 @@ class TriggerServiceClient(Node):
         super().__init__('trigger_service_client')
 
         # GPIO setup
-        self.button1_pin = 13  # GPIO pin for button 1
-        self.button2_pin = 11  # GPIO pin for button 2
+        self.button1_pin = 16  # GPIO pin for button 1
+        self.button2_pin = 18  # GPIO pin for button 2
 
         GPIO.setmode(GPIO.BOARD)
         GPIO.setup(self.button1_pin, GPIO.IN, pull_up_down=GPIO.PUD_UP)

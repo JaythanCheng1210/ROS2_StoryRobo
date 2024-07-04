@@ -1,9 +1,19 @@
 from DXL_motor_control import DXL_Conmunication
+
 import time
 import sys, tty, termios
 import traceback
 import json 
 import threading
+
+#For audio
+import pyaudio
+import wave
+import sounddevice as sd
+import soundfile as sf
+from playsound import playsound
+
+import os
 
 # Keyboard interrupt 
 fd = sys.stdin.fileno()
@@ -29,7 +39,13 @@ class ControlCmd:
     def __init__(self):
 
         self.record_path = '/home/storyrobo/storyrobo_ws/ROS2_StoryRobo/storyrobo_service/driver/output.txt'
+        self.audio_store_path = '/home/storyrobo/storyrobo_ws/ROS2_StoryRobo/storyrobo_service/driver'
+        self.audio_path = os.path.join(self.audio_store_path, 'output.wav')
 
+        self.recording = False
+        self.is_recording = False
+        # self.replaying = False
+        
         self.dynamixel = DXL_Conmunication(DEVICE_NAME, B_RATE)
         self.dynamixel.activateDXLConnection()
         motor0 = self.dynamixel.createMotor('motor0', motor_number=0)
@@ -71,16 +87,6 @@ class ControlCmd:
     def disable_all_motor(self):
         for motor in self.motor_list:
             motor.disableMotor()
-
-    # def read_motor_data(self):
-    #     for motor in self.motor_list:
-    #         position, _ = motor.directReadData(132, 4)
-    #         # print("motor id:", motor.DXL_ID, "motor position:", position)
-    #         while abs(position) > 4095:
-    #             position = position - (position/abs(position)) * 4095
-    #         self.motor_position[motor.name] = int(position*360/4095)
-
-    #     return self.motor_position
     
     def motor_led_control(self, state = LED_OFF):
         for motor in self.motor_list:
@@ -118,7 +124,10 @@ class ControlCmd:
     def start_record_action_points(self):
         self.is_recording = True
         self.recording_thread = threading.Thread(target=self.process_record_action_points, args=(), daemon=True)
+        self.record_audio_thread = threading.Thread(target=self.record_audio, args=(self.audio_path, ), daemon=True)
+
         self.recording_thread.start()
+        self.record_audio_thread.start()
 
     # Stop recording
     def stop_record_action_points(self):
@@ -128,6 +137,7 @@ class ControlCmd:
     # Replay the recording file
     def replay_recorded_data(self):
         self.enable_all_motor()
+        time.sleep(3.5)
         with open(self.record_path) as f: 
             one_action_point = f.readline()
             while one_action_point:
@@ -149,9 +159,60 @@ class ControlCmd:
                 time.sleep(0.1)
                 one_action_point = f.readline()
 
+    def record_audio(self, audio_path):
+        # global recording
+        FRAMES_PER_BUFFER = 4096
+        FORMAT = pyaudio.paInt16
+        CHANNELS = 1
+        RATE = 48000
+        p = pyaudio.PyAudio()
+        
+        stream = p.open(
+                            format              =   FORMAT,
+                            channels            =   CHANNELS,
+                            rate                =   RATE,
+                            input               =   True,
+                            frames_per_buffer   =   FRAMES_PER_BUFFER,
+                        )
+
+        print("Start recording audio...")
+        frames = []
+        
+        while self.is_recording:
+            data = stream.read(FRAMES_PER_BUFFER)
+            frames.append(data)
+            
+            # Check for event to stop recording
+            if not self.is_recording:
+                break
+
+        print("Stop recording audio!")
+        
+        stream.stop_stream()
+        stream.close()
+        p.terminate()
+
+        obj = wave.open(audio_path, "wb")
+        obj.setnchannels(CHANNELS)
+        obj.setsampwidth(p.get_sample_size(FORMAT))
+        obj.setframerate(RATE)
+        obj.writeframes(b"".join(frames))
+        obj.close()
+            
+        print("Audio stored...")
+        return
+
+    def replay_audio(self):
+        playsound('/home/storyrobo/storyrobo_ws/ROS2_StoryRobo/storyrobo_service/driver/output.wav')
+
+    def replay_all(self):
+        self.replay_movement_thread = threading.Thread(target=self.replay_recorded_data)
+        self.replay_audio_thread = threading.Thread(target=self.replay_audio)
+        self.replay_movement_thread.start()
+        self.replay_audio_thread.start()
 
 
-
+        
 if __name__ == "__main__":
     controlcmd = ControlCmd()
 
@@ -167,8 +228,10 @@ if __name__ == "__main__":
         "read":controlcmd.read_all_motor_data,
         "record":controlcmd.start_record_action_points,
         "stop":controlcmd.stop_record_action_points,
-        "replay":controlcmd.replay_recorded_data,
+        "replay":controlcmd.replay_all,
         "disable":controlcmd.disable_all_motor,
+        # "rcaudio":controlcmd.record_audio,
+        # "rpaudio":controlcmd.replay_audio,
 
     }
 

@@ -17,7 +17,10 @@ git clone https://github.com/JaythanCheng1210/ROS2_StoryRobo.git
 ```
 ```
 sudo apt install python3-pip
+sudo apt install python3-pyaudio
 sudo pip3 install Jetson.GPIO
+sudo pip3 install sounddevice
+sudo pip3 install soundfile
 ```
 ### DynamixelSDK setup
 - cd /home/user: 

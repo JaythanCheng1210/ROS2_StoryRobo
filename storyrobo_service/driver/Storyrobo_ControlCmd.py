@@ -15,16 +15,16 @@ from playsound import playsound
 
 import os
 
-# Keyboard interrupt 
-fd = sys.stdin.fileno()
-old_settings = termios.tcgetattr(fd)
-def getch():
-    try:
-        tty.setraw(sys.stdin.fileno())
-        ch = sys.stdin.read(1)
-    finally:
-        termios.tcsetattr(fd, termios.TCSADRAIN, old_settings)
-    return ch
+# # Keyboard interrupt 
+# fd = sys.stdin.fileno()
+# old_settings = termios.tcgetattr(fd)
+# def getch():
+#     try:
+#         tty.setraw(sys.stdin.fileno())
+#         ch = sys.stdin.read(1)
+#     finally:
+#         termios.tcsetattr(fd, termios.TCSADRAIN, old_settings)
+#     return ch
 
 
 # main control command
@@ -106,8 +106,8 @@ class ControlCmd:
     def process_record_action_points(self):
         self.disable_all_motor()
         print("disabling")
-        self.dynamixel.rebootAllMotor()
-        print("rebooting")
+        # self.dynamixel.rebootAllMotor()
+        # print("rebooting")
         self.motor_led_control(LED_ON)
         
         with open(self.record_path, 'w') as f:
@@ -137,7 +137,7 @@ class ControlCmd:
     # Replay the recording file
     def replay_recorded_data(self):
         self.enable_all_motor()
-        time.sleep(3.5)
+        time.sleep(0.7)
         with open(self.record_path) as f: 
             one_action_point = f.readline()
             while one_action_point:
@@ -158,6 +158,8 @@ class ControlCmd:
                                                         "motor11":one_action_point["motor11"]})
                 time.sleep(0.1)
                 one_action_point = f.readline()
+        self.disable_all_motor()
+        
 
     def record_audio(self, audio_path):
         # global recording
@@ -210,7 +212,7 @@ class ControlCmd:
         self.replay_audio_thread = threading.Thread(target=self.replay_audio)
         self.replay_movement_thread.start()
         self.replay_audio_thread.start()
-
+ 
 
         
 if __name__ == "__main__":

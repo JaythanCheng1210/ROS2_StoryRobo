@@ -7,7 +7,6 @@
 - [If ubunt 20.04 | ROS2 foxy](https://docs.ros.org/en/foxy/Installation.html)
 
 ### environment setup
-- [GPIO root setup](https://forum.up-community.org/discussion/2141/solved-tutorial-gpio-i2c-spi-access-without-root-permissions)
 - [JETSON-ORIN-NANO-DEV-KIT Burning Systems Details](https://blog.cavedu.com/2023/05/09/jetson-orin-nano-boot/)
 ```
 mkdir storyrobo_ws && cd storyrobo_ws
@@ -40,7 +39,7 @@ colcon build
 
 ### Start
 ```
-
+ros2 launch storyrobo_service storyrobo.launch.py
 ```
 
 

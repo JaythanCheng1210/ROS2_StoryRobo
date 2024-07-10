@@ -3,10 +3,20 @@
 ## **Requirements**
 
 - Python 3.10
-- [If ubunt 22.04 | ROS2 humble](https://docs.ros.org/en/humble/Installation.html)
-- [If ubunt 20.04 | ROS2 foxy](https://docs.ros.org/en/foxy/Installation.html)
+- [ubunt 20.04 | ROS2 foxy](https://docs.ros.org/en/foxy/Installation.html)
 
-### environment setup
+### Hardware circuit configuration
+- Power system 
+
+<img src="https://i.imgur.com/7bvDx8M.jpeg" width="500" />
+
+
+- GPIO Button
+
+<img src="https://u.fmyeah.com/i15/668e4f2c70084.jpeg" width="500"/>
+
+
+### Environment setup
 - [JETSON-ORIN-NANO-DEV-KIT Burning Systems Details](https://blog.cavedu.com/2023/05/09/jetson-orin-nano-boot/)
 ```
 mkdir storyrobo_ws && cd storyrobo_ws
@@ -31,7 +41,7 @@ cd /DynamixlSDK/python && sudo python setup.py install
 ```
 
 
-- build: 
+- cd storyrobo_ws build: 
 ```
 colcon build
 ```

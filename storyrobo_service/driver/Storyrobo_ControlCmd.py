@@ -38,8 +38,8 @@ LED_OFF = 0
 class ControlCmd:
     def __init__(self):
 
-        self.record_path = '/home/storyrobo/storyrobo_ws/ROS2_StoryRobo/storyrobo_service/driver/output.txt'
-        self.audio_store_path = '/home/storyrobo/storyrobo_ws/ROS2_StoryRobo/storyrobo_service/driver'
+        self.record_path = '/home/storyrobo/storyrobo_ws/ROS2_StoryRobo/storyrobo_service/driver/data/joint.json'
+        self.audio_store_path = '/home/storyrobo/storyrobo_ws/ROS2_StoryRobo/storyrobo_service/driver/data'
         self.audio_path = os.path.join(self.audio_store_path, 'output.wav')
 
         self.recording = False
@@ -73,16 +73,17 @@ class ControlCmd:
     def read_all_motor_data(self):
         self.dynamixel.updateMotorData()
         for motor in self.motor_list:
-            self.motor_position[motor.name] = motor.PRESENT_POSITION_value
-
-        print("motor_position", self.motor_position)
-        return self.motor_position
-
+            position, _ = motor.directReadData(132, 4)
+            print("motor id:", motor.DXL_ID, "motor position:", position)
+            while abs(position) > 4095:
+                position = position - (position/abs(position)) * 4095
+            self.motor_position[motor.name] = int(position*360/4095)
+        
+        return self.motor_position   
 
     def enable_all_motor(self):
         for motor in self.motor_list:
             motor.enableMotor()
-            
 
     def disable_all_motor(self):
         for motor in self.motor_list:
@@ -116,7 +117,7 @@ class ControlCmd:
                 all_servo_position = self.read_all_motor_data()
                 print(f"recording: {all_servo_position}")
                 f.write(json.dumps(all_servo_position)+'\n')
-                # time.sleep(0.01)
+                time.sleep(0.001)
             self.motor_led_control(LED_OFF)
         print("finish recording!")
 
@@ -124,9 +125,11 @@ class ControlCmd:
     def start_record_action_points(self):
         self.is_recording = True
         self.recording_thread = threading.Thread(target=self.process_record_action_points, args=(), daemon=True)
+        # self.recording_joints_thread = threading.Thread(target=self.process_record_action_joints, args=(), daemon=True)
         self.record_audio_thread = threading.Thread(target=self.record_audio, args=(self.audio_path, ), daemon=True)
 
         self.recording_thread.start()
+        # self.recording_joints_thread.start()
         self.record_audio_thread.start()
 
     # Stop recording
@@ -137,28 +140,29 @@ class ControlCmd:
     # Replay the recording file
     def replay_recorded_data(self):
         self.enable_all_motor()
-        time.sleep(0.7)
+        time.sleep(0.55)
         with open(self.record_path) as f: 
             one_action_point = f.readline()
             while one_action_point:
                 one_action_point = json.loads(one_action_point) 
                 print(one_action_point)
 
-                self.motor_position_control(position = {"motor0":one_action_point["motor0"],
-                                                        "motor1":one_action_point["motor1"], 
-                                                        "motor2":one_action_point["motor2"], 
-                                                        "motor3":one_action_point["motor3"], 
-                                                        "motor4":one_action_point["motor4"], 
-                                                        "motor5":one_action_point["motor5"],
-                                                        "motor6":one_action_point["motor6"],
-                                                        "motor7":one_action_point["motor7"],
-                                                        "motor8":one_action_point["motor8"],
-                                                        "motor9":one_action_point["motor9"],
-                                                        "motor10":one_action_point["motor10"],
-                                                        "motor11":one_action_point["motor11"]})
-                time.sleep(0.1)
+                self.motor_position_control(position = {"motor0": int((one_action_point["motor0"] * 4095) / 360),
+                                                        "motor1": int((one_action_point["motor1"] * 4095) / 360), 
+                                                        "motor2": int((one_action_point["motor2"] * 4095) / 360), 
+                                                        "motor3": int((one_action_point["motor3"] * 4095) / 360), 
+                                                        "motor4": int((one_action_point["motor4"] * 4095) / 360), 
+                                                        "motor5": int((one_action_point["motor5"] * 4095) / 360),
+                                                        "motor6": int((one_action_point["motor6"] * 4095) / 360),
+                                                        "motor7": int((one_action_point["motor7"] * 4095) / 360),
+                                                        "motor8": int((one_action_point["motor8"] * 4095) / 360),
+                                                        "motor9": int((one_action_point["motor9"] * 4095) / 360),
+                                                        "motor10": int((one_action_point["motor10"] * 4095) / 360),
+                                                        "motor11": int((one_action_point["motor11"] * 4095) / 360)})
+                time.sleep(0.3)
                 one_action_point = f.readline()
-        self.disable_all_motor()
+        self.disable_all_motor()  
+
         
 
     def record_audio(self, audio_path):
@@ -205,7 +209,7 @@ class ControlCmd:
         return
 
     def replay_audio(self):
-        playsound('/home/storyrobo/storyrobo_ws/ROS2_StoryRobo/storyrobo_service/driver/output.wav')
+        playsound('/home/storyrobo/storyrobo_ws/ROS2_StoryRobo/storyrobo_service/driver/data/output.wav')
 
     def replay_all(self):
         self.replay_movement_thread = threading.Thread(target=self.replay_recorded_data)

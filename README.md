@@ -1,4 +1,4 @@
-# ros2-pangolin-robot
+# ros2-Echobot-robot
 
 ## **Requirements**
 

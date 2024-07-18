@@ -18,6 +18,7 @@ class ReplayServiceServer(Node):
 
     def replay_service_callback(self, request, response):
         self.get_logger().info('Replay service called.')
+        self.controlcmd.replaying = True
         response.success = True
         response.message = 'Replay started successfully.'
         self.controlcmd.replay_all()
@@ -27,7 +28,7 @@ class ReplayServiceServer(Node):
 def main(args=None):
     rclpy.init(args=args)
 
-    replay_service_server = ReplayServiceServer()
+    replay_service_server = ReplayServiceServer() 
 
     rclpy.spin(replay_service_server)
 

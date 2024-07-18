@@ -3,6 +3,7 @@ from rclpy.node import Node
 from std_srvs.srv import Trigger
 import RPi.GPIO as GPIO
 import time
+import socketio
 
 class TriggerServiceClient(Node):
 

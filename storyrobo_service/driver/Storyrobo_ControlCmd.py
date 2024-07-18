@@ -43,8 +43,9 @@ class ControlCmd:
         self.audio_path = os.path.join(self.audio_store_path, 'output.wav')
 
         self.recording = False
+        self.replaying = False
         self.is_recording = False
-        # self.replaying = False
+        self.is_replaying = False
         
         self.dynamixel = DXL_Conmunication(DEVICE_NAME, B_RATE)
         self.dynamixel.activateDXLConnection()
@@ -70,16 +71,6 @@ class ControlCmd:
         self.dynamixel.rebootAllMotor()
         self.dynamixel.updateMotorData()
 
-    def read_all_motor_data(self):
-        self.dynamixel.updateMotorData()
-        for motor in self.motor_list:
-            position, _ = motor.directReadData(132, 4)
-            print("motor id:", motor.DXL_ID, "motor position:", position)
-            while abs(position) > 4095:
-                position = position - (position/abs(position)) * 4095
-            self.motor_position[motor.name] = int(position*360/4095)
-        
-        return self.motor_position   
 
     def enable_all_motor(self):
         for motor in self.motor_list:
@@ -94,6 +85,18 @@ class ControlCmd:
             led_on = motor.directWriteData(state, *LED_ADDR_LEN)
             
         return led_on
+    
+    def read_all_motor_data(self):
+        self.dynamixel.updateMotorData()
+        for motor in self.motor_list:
+            position, _ = motor.directReadData(132, 4)
+            # print("motor id:", motor.DXL_ID, "motor position:", position)
+            while abs(position) > 4095:
+                position = position - (position/abs(position)) * 4095
+            self.motor_position[motor.name] = int(position*360/4095)
+            print(self.motor_position)
+        
+        return self.motor_position   
     
     # Control position of all motors
     def motor_position_control(self, position =  {'motor0': 1642, 'motor1': 1864, 'motor2': 2208, 'motor3': 1846, 'motor4': 2183, 'motor5': 2382, 
@@ -125,11 +128,9 @@ class ControlCmd:
     def start_record_action_points(self):
         self.is_recording = True
         self.recording_thread = threading.Thread(target=self.process_record_action_points, args=(), daemon=True)
-        # self.recording_joints_thread = threading.Thread(target=self.process_record_action_joints, args=(), daemon=True)
         self.record_audio_thread = threading.Thread(target=self.record_audio, args=(self.audio_path, ), daemon=True)
 
         self.recording_thread.start()
-        # self.recording_joints_thread.start()
         self.record_audio_thread.start()
 
     # Stop recording
@@ -161,7 +162,7 @@ class ControlCmd:
                                                         "motor11": int((one_action_point["motor11"] * 4095) / 360)})
                 time.sleep(0.3)
                 one_action_point = f.readline()
-        self.disable_all_motor()  
+        self.disable_all_motor() 
 
         
 
@@ -216,8 +217,6 @@ class ControlCmd:
         self.replay_audio_thread = threading.Thread(target=self.replay_audio)
         self.replay_movement_thread.start()
         self.replay_audio_thread.start()
- 
-
         
 if __name__ == "__main__":
     controlcmd = ControlCmd()

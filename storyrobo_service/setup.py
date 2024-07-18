@@ -23,9 +23,10 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'record_service_server = storyrobo_service.record_service_server:main',
-            'replay_service_server = storyrobo_service.replay_service_server:main',
+            # 'record_service_server = storyrobo_service.record_service_server:main',
+            # # 'replay_service_server = storyrobo_service.replay_service_server:main',
             'trigger_service_client = storyrobo_service.trigger_service_client_button:main',
+            'rec_rep_service_server = storyrobo_service.rec_rep_service_server:main'
         ],
     },
 )

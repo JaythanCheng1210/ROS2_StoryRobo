@@ -8,8 +8,6 @@ sys.path.append('/home/storyrobo/storyrobo_ws/ROS2_StoryRobo/storyrobo_service/d
 from Storyrobo_ControlCmd import ControlCmd
 
 class RecordServiceServer(Node):
-
-
     def __init__(self):
         super().__init__('record_service_server')
         self.srv = self.create_service(Trigger, 'record_service', self.record_service_callback)
@@ -31,11 +29,10 @@ class RecordServiceServer(Node):
             response.success = True
             response.message = 'Recording started successfully.'
             self.controlcmd.start_record_action_points()
-
-
             self.controlcmd.recording = True
         
         return response
+
 
 def main(args=None):
     rclpy.init(args=args)

@@ -3,10 +3,51 @@ from rclpy.node import Node
 from std_srvs.srv import Trigger
 import os, sys, math
 import threading
+import socketio
 
 sys.path.append('/home/storyrobo/storyrobo_ws/ROS2_StoryRobo/storyrobo_service/driver')
 from Storyrobo_ControlCmd import ControlCmd        
 controlcmd = ControlCmd()
+sio = socketio.Client()
+
+class StoryRoboClient:
+    def __init__(self, server_url):
+        self.controlcmd = ControlCmd()
+        self.sio = socketio.Client()
+        self.server_url = server_url
+
+        # Register event handlers
+        self.sio.event(self.connect)
+        self.sio.event(self.disconnect)
+        self.sio.on('response', self.response)
+        # self.sio.on("MotorFromServer", self.EchoBotMotor)
+
+    def connect(self):
+        print('Connected to server')
+        try:
+            while True:
+                message = self.controlcmd.read_all_motor_data()
+                # message = json.dumps(self.controlcmd.read_all_motor_data())
+                self.sio.emit('EchoBotMotor', message)
+        except KeyboardInterrupt:
+            pass
+        finally:
+            self.sio.disconnect()
+
+    def response(self, data):
+        print('Server response:', data)
+
+    def disconnect(self):
+        print('Disconnected from server')
+
+    # def EchoBotMotor(self, data):
+    #     print('Received message:', data)
+    #     # self.sio.emit('MotorFromServer', data)
+
+    def run(self):
+        self.sio.connect(self.server_url)
+        self.sio.wait()
+
 
 class RecordServiceServer(Node):
     def __init__(self):

@@ -163,7 +163,21 @@ class ControlCmd:
                 time.sleep(0.3)
                 one_action_point = f.readline()
         self.disable_all_motor() 
-
+    
+    def real_time_replay(self, joint):
+        self.motor_position_control(position = {    "motor0": int((joint["motor0"] * 4095) / 360),
+                                                    "motor1": int((joint["motor1"] * 4095) / 360), 
+                                                    "motor2": int((joint["motor2"] * 4095) / 360), 
+                                                    "motor3": int((joint["motor3"] * 4095) / 360), 
+                                                    "motor4": int((joint["motor4"] * 4095) / 360), 
+                                                    "motor5": int((joint["motor5"] * 4095) / 360),
+                                                    "motor6": int((joint["motor6"] * 4095) / 360),
+                                                    "motor7": int((joint["motor7"] * 4095) / 360),
+                                                    "motor8": int((joint["motor8"] * 4095) / 360),
+                                                    "motor9": int((joint["motor9"] * 4095) / 360),
+                                                    "motor10": int((joint["motor10"] * 4095) / 360),
+                                                    "motor11": int((joint["motor11"] * 4095) / 360)})
+        # time.sleep(0.3)
         
 
     def record_audio(self, audio_path):

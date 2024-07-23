@@ -1882,3 +1882,448 @@ serial.serialutil.SerialException: [Errno 2] could not open port /dev/ttyUSB0: [
 [2024-07-17 16:29:21,370] [DXL_Conmunication .DXL_motor_10] [INFO]: rebootMotor : [ID:10] reboot Succeeded
 [2024-07-17 16:29:21,386] [DXL_Conmunication .DXL_motor_11] [INFO]: rebootMotor : [ID:11] reboot Succeeded
 [2024-07-17 16:29:24,874] [DXL_Conmunication] [WARNING]: updateMotorData : Failed: [TxRxResult] Incorrect status packet!
+[2024-07-19 09:20:34,214] [DXL_Conmunication] [INFO]: activateDXLConnection : Succeeded to open the port
+[2024-07-19 09:20:34,221] [DXL_Conmunication] [INFO]: activateDXLConnection : Succeeded to change the baudrate
+[2024-07-19 09:20:34,259] [DXL_Conmunication .DXL_motor_0] [INFO]: directReadData : com_err_msg : [TxRxResult] There is no status packet! at ID: 0
+[2024-07-19 09:20:34,296] [DXL_Conmunication .DXL_motor_0] [INFO]: pingMotor : DXL: Ping Error: [TxRxResult] There is no status packet! at ID:0
+[2024-07-19 09:20:34,296] [DXL_Conmunication] [WARNING]: createMotor : Motor 0 connect error
+[2024-07-19 09:20:34,334] [DXL_Conmunication .DXL_motor_1] [INFO]: directReadData : com_err_msg : [TxRxResult] There is no status packet! at ID: 1
+[2024-07-19 09:20:34,371] [DXL_Conmunication .DXL_motor_1] [INFO]: pingMotor : DXL: Ping Error: [TxRxResult] There is no status packet! at ID:1
+[2024-07-19 09:20:34,371] [DXL_Conmunication] [WARNING]: createMotor : Motor 1 connect error
+[2024-07-19 09:20:34,409] [DXL_Conmunication .DXL_motor_2] [INFO]: directReadData : com_err_msg : [TxRxResult] There is no status packet! at ID: 2
+[2024-07-19 09:20:34,446] [DXL_Conmunication .DXL_motor_2] [INFO]: pingMotor : DXL: Ping Error: [TxRxResult] There is no status packet! at ID:2
+[2024-07-19 09:20:34,446] [DXL_Conmunication] [WARNING]: createMotor : Motor 2 connect error
+[2024-07-19 09:20:34,484] [DXL_Conmunication .DXL_motor_3] [INFO]: directReadData : com_err_msg : [TxRxResult] There is no status packet! at ID: 3
+[2024-07-19 09:20:34,521] [DXL_Conmunication .DXL_motor_3] [INFO]: pingMotor : DXL: Ping Error: [TxRxResult] There is no status packet! at ID:3
+[2024-07-19 09:20:34,521] [DXL_Conmunication] [WARNING]: createMotor : Motor 3 connect error
+[2024-07-19 09:20:34,558] [DXL_Conmunication .DXL_motor_4] [INFO]: directReadData : com_err_msg : [TxRxResult] There is no status packet! at ID: 4
+[2024-07-19 09:20:34,595] [DXL_Conmunication .DXL_motor_4] [INFO]: pingMotor : DXL: Ping Error: [TxRxResult] There is no status packet! at ID:4
+[2024-07-19 09:20:34,596] [DXL_Conmunication] [WARNING]: createMotor : Motor 4 connect error
+[2024-07-19 09:20:34,634] [DXL_Conmunication .DXL_motor_5] [INFO]: directReadData : com_err_msg : [TxRxResult] There is no status packet! at ID: 5
+[2024-07-19 09:20:34,671] [DXL_Conmunication .DXL_motor_5] [INFO]: pingMotor : DXL: Ping Error: [TxRxResult] There is no status packet! at ID:5
+[2024-07-19 09:20:34,671] [DXL_Conmunication] [WARNING]: createMotor : Motor 5 connect error
+[2024-07-19 09:20:34,709] [DXL_Conmunication .DXL_motor_6] [INFO]: directReadData : com_err_msg : [TxRxResult] There is no status packet! at ID: 6
+[2024-07-19 09:20:34,746] [DXL_Conmunication .DXL_motor_6] [INFO]: pingMotor : DXL: Ping Error: [TxRxResult] There is no status packet! at ID:6
+[2024-07-19 09:20:34,746] [DXL_Conmunication] [WARNING]: createMotor : Motor 6 connect error
+[2024-07-19 09:20:34,783] [DXL_Conmunication .DXL_motor_7] [INFO]: directReadData : com_err_msg : [TxRxResult] There is no status packet! at ID: 7
+[2024-07-19 09:20:34,820] [DXL_Conmunication .DXL_motor_7] [INFO]: pingMotor : DXL: Ping Error: [TxRxResult] There is no status packet! at ID:7
+[2024-07-19 09:20:34,820] [DXL_Conmunication] [WARNING]: createMotor : Motor 7 connect error
+[2024-07-19 09:20:34,858] [DXL_Conmunication .DXL_motor_8] [INFO]: directReadData : com_err_msg : [TxRxResult] There is no status packet! at ID: 8
+[2024-07-19 09:20:34,895] [DXL_Conmunication .DXL_motor_8] [INFO]: pingMotor : DXL: Ping Error: [TxRxResult] There is no status packet! at ID:8
+[2024-07-19 09:20:34,895] [DXL_Conmunication] [WARNING]: createMotor : Motor 8 connect error
+[2024-07-19 09:20:34,932] [DXL_Conmunication .DXL_motor_9] [INFO]: directReadData : com_err_msg : [TxRxResult] There is no status packet! at ID: 9
+[2024-07-19 09:20:34,969] [DXL_Conmunication .DXL_motor_9] [INFO]: pingMotor : DXL: Ping Error: [TxRxResult] There is no status packet! at ID:9
+[2024-07-19 09:20:34,970] [DXL_Conmunication] [WARNING]: createMotor : Motor 9 connect error
+[2024-07-19 09:20:35,008] [DXL_Conmunication .DXL_motor_10] [INFO]: directReadData : com_err_msg : [TxRxResult] There is no status packet! at ID: 10
+[2024-07-19 09:20:35,045] [DXL_Conmunication .DXL_motor_10] [INFO]: pingMotor : DXL: Ping Error: [TxRxResult] There is no status packet! at ID:10
+[2024-07-19 09:20:35,045] [DXL_Conmunication] [WARNING]: createMotor : Motor 10 connect error
+[2024-07-19 09:20:35,083] [DXL_Conmunication .DXL_motor_11] [INFO]: directReadData : com_err_msg : [TxRxResult] There is no status packet! at ID: 11
+[2024-07-19 09:20:35,120] [DXL_Conmunication .DXL_motor_11] [INFO]: pingMotor : DXL: Ping Error: [TxRxResult] There is no status packet! at ID:11
+[2024-07-19 09:20:35,121] [DXL_Conmunication] [WARNING]: createMotor : Motor 11 connect error
+[2024-07-19 09:21:07,240] [DXL_Conmunication] [INFO]: activateDXLConnection : Succeeded to open the port
+[2024-07-19 09:21:07,247] [DXL_Conmunication] [INFO]: activateDXLConnection : Succeeded to change the baudrate
+[2024-07-19 09:21:07,283] [DXL_Conmunication .DXL_motor_0] [INFO]: pingMotor : [ID:000] ping Succeeded. Dynamixel model number : 1200
+[2024-07-19 09:21:07,315] [DXL_Conmunication .DXL_motor_1] [INFO]: pingMotor : [ID:001] ping Succeeded. Dynamixel model number : 1200
+[2024-07-19 09:21:07,347] [DXL_Conmunication .DXL_motor_2] [INFO]: pingMotor : [ID:002] ping Succeeded. Dynamixel model number : 1200
+[2024-07-19 09:21:07,380] [DXL_Conmunication .DXL_motor_3] [INFO]: pingMotor : [ID:003] ping Succeeded. Dynamixel model number : 1200
+[2024-07-19 09:21:07,411] [DXL_Conmunication .DXL_motor_4] [INFO]: pingMotor : [ID:004] ping Succeeded. Dynamixel model number : 1200
+[2024-07-19 09:21:07,443] [DXL_Conmunication .DXL_motor_5] [INFO]: pingMotor : [ID:005] ping Succeeded. Dynamixel model number : 1200
+[2024-07-19 09:21:07,475] [DXL_Conmunication .DXL_motor_6] [INFO]: pingMotor : [ID:006] ping Succeeded. Dynamixel model number : 1200
+[2024-07-19 09:21:07,507] [DXL_Conmunication .DXL_motor_7] [INFO]: pingMotor : [ID:007] ping Succeeded. Dynamixel model number : 1200
+[2024-07-19 09:21:07,539] [DXL_Conmunication .DXL_motor_8] [INFO]: pingMotor : [ID:008] ping Succeeded. Dynamixel model number : 1200
+[2024-07-19 09:21:07,571] [DXL_Conmunication .DXL_motor_9] [INFO]: pingMotor : [ID:009] ping Succeeded. Dynamixel model number : 1200
+[2024-07-19 09:21:07,603] [DXL_Conmunication .DXL_motor_10] [INFO]: pingMotor : [ID:010] ping Succeeded. Dynamixel model number : 1200
+[2024-07-19 09:21:07,635] [DXL_Conmunication .DXL_motor_11] [INFO]: pingMotor : [ID:011] ping Succeeded. Dynamixel model number : 1200
+[2024-07-19 09:21:07,651] [DXL_Conmunication .DXL_motor_0] [INFO]: rebootMotor : [ID:0] reboot Succeeded
+[2024-07-19 09:21:07,667] [DXL_Conmunication .DXL_motor_1] [INFO]: rebootMotor : [ID:1] reboot Succeeded
+[2024-07-19 09:21:07,683] [DXL_Conmunication .DXL_motor_2] [INFO]: rebootMotor : [ID:2] reboot Succeeded
+[2024-07-19 09:21:07,699] [DXL_Conmunication .DXL_motor_3] [INFO]: rebootMotor : [ID:3] reboot Succeeded
+[2024-07-19 09:21:07,715] [DXL_Conmunication .DXL_motor_4] [INFO]: rebootMotor : [ID:4] reboot Succeeded
+[2024-07-19 09:21:07,731] [DXL_Conmunication .DXL_motor_5] [INFO]: rebootMotor : [ID:5] reboot Succeeded
+[2024-07-19 09:21:07,747] [DXL_Conmunication .DXL_motor_6] [INFO]: rebootMotor : [ID:6] reboot Succeeded
+[2024-07-19 09:21:07,763] [DXL_Conmunication .DXL_motor_7] [INFO]: rebootMotor : [ID:7] reboot Succeeded
+[2024-07-19 09:21:07,779] [DXL_Conmunication .DXL_motor_8] [INFO]: rebootMotor : [ID:8] reboot Succeeded
+[2024-07-19 09:21:07,795] [DXL_Conmunication .DXL_motor_9] [INFO]: rebootMotor : [ID:9] reboot Succeeded
+[2024-07-19 09:21:07,811] [DXL_Conmunication .DXL_motor_10] [INFO]: rebootMotor : [ID:10] reboot Succeeded
+[2024-07-19 09:21:07,827] [DXL_Conmunication .DXL_motor_11] [INFO]: rebootMotor : [ID:11] reboot Succeeded
+[2024-07-19 09:36:47,201] [DXL_Conmunication] [INFO]: activateDXLConnection : Succeeded to open the port
+[2024-07-19 09:36:47,208] [DXL_Conmunication] [INFO]: activateDXLConnection : Succeeded to change the baudrate
+[2024-07-19 09:36:47,244] [DXL_Conmunication .DXL_motor_0] [INFO]: pingMotor : [ID:000] ping Succeeded. Dynamixel model number : 1200
+[2024-07-19 09:36:47,276] [DXL_Conmunication .DXL_motor_1] [INFO]: pingMotor : [ID:001] ping Succeeded. Dynamixel model number : 1200
+[2024-07-19 09:36:47,308] [DXL_Conmunication .DXL_motor_2] [INFO]: pingMotor : [ID:002] ping Succeeded. Dynamixel model number : 1200
+[2024-07-19 09:36:47,340] [DXL_Conmunication .DXL_motor_3] [INFO]: pingMotor : [ID:003] ping Succeeded. Dynamixel model number : 1200
+[2024-07-19 09:36:47,372] [DXL_Conmunication .DXL_motor_4] [INFO]: pingMotor : [ID:004] ping Succeeded. Dynamixel model number : 1200
+[2024-07-19 09:36:47,404] [DXL_Conmunication .DXL_motor_5] [INFO]: pingMotor : [ID:005] ping Succeeded. Dynamixel model number : 1200
+[2024-07-19 09:36:47,436] [DXL_Conmunication .DXL_motor_6] [INFO]: pingMotor : [ID:006] ping Succeeded. Dynamixel model number : 1200
+[2024-07-19 09:36:47,468] [DXL_Conmunication .DXL_motor_7] [INFO]: pingMotor : [ID:007] ping Succeeded. Dynamixel model number : 1200
+[2024-07-19 09:36:47,500] [DXL_Conmunication .DXL_motor_8] [INFO]: pingMotor : [ID:008] ping Succeeded. Dynamixel model number : 1200
+[2024-07-19 09:36:47,532] [DXL_Conmunication .DXL_motor_9] [INFO]: pingMotor : [ID:009] ping Succeeded. Dynamixel model number : 1200
+[2024-07-19 09:36:47,564] [DXL_Conmunication .DXL_motor_10] [INFO]: pingMotor : [ID:010] ping Succeeded. Dynamixel model number : 1200
+[2024-07-19 09:36:47,596] [DXL_Conmunication .DXL_motor_11] [INFO]: pingMotor : [ID:011] ping Succeeded. Dynamixel model number : 1200
+[2024-07-19 09:36:47,612] [DXL_Conmunication .DXL_motor_0] [INFO]: rebootMotor : [ID:0] reboot Succeeded
+[2024-07-19 09:36:47,628] [DXL_Conmunication .DXL_motor_1] [INFO]: rebootMotor : [ID:1] reboot Succeeded
+[2024-07-19 09:36:47,644] [DXL_Conmunication .DXL_motor_2] [INFO]: rebootMotor : [ID:2] reboot Succeeded
+[2024-07-19 09:36:47,660] [DXL_Conmunication .DXL_motor_3] [INFO]: rebootMotor : [ID:3] reboot Succeeded
+[2024-07-19 09:36:47,676] [DXL_Conmunication .DXL_motor_4] [INFO]: rebootMotor : [ID:4] reboot Succeeded
+[2024-07-19 09:36:47,692] [DXL_Conmunication .DXL_motor_5] [INFO]: rebootMotor : [ID:5] reboot Succeeded
+[2024-07-19 09:36:47,708] [DXL_Conmunication .DXL_motor_6] [INFO]: rebootMotor : [ID:6] reboot Succeeded
+[2024-07-19 09:36:47,724] [DXL_Conmunication .DXL_motor_7] [INFO]: rebootMotor : [ID:7] reboot Succeeded
+[2024-07-19 09:36:47,740] [DXL_Conmunication .DXL_motor_8] [INFO]: rebootMotor : [ID:8] reboot Succeeded
+[2024-07-19 09:36:47,756] [DXL_Conmunication .DXL_motor_9] [INFO]: rebootMotor : [ID:9] reboot Succeeded
+[2024-07-19 09:36:47,772] [DXL_Conmunication .DXL_motor_10] [INFO]: rebootMotor : [ID:10] reboot Succeeded
+[2024-07-19 09:36:47,788] [DXL_Conmunication .DXL_motor_11] [INFO]: rebootMotor : [ID:11] reboot Succeeded
+[2024-07-19 15:14:23,665] [DXL_Conmunication] [INFO]: activateDXLConnection : Succeeded to open the port
+[2024-07-19 15:14:23,672] [DXL_Conmunication] [INFO]: activateDXLConnection : Succeeded to change the baudrate
+[2024-07-19 15:14:23,710] [DXL_Conmunication .DXL_motor_0] [INFO]: directReadData : com_err_msg : [TxRxResult] There is no status packet! at ID: 0
+[2024-07-19 15:14:23,747] [DXL_Conmunication .DXL_motor_0] [INFO]: pingMotor : DXL: Ping Error: [TxRxResult] There is no status packet! at ID:0
+[2024-07-19 15:14:23,747] [DXL_Conmunication] [WARNING]: createMotor : Motor 0 connect error
+[2024-07-19 15:14:23,784] [DXL_Conmunication .DXL_motor_1] [INFO]: directReadData : com_err_msg : [TxRxResult] There is no status packet! at ID: 1
+[2024-07-19 15:14:23,821] [DXL_Conmunication .DXL_motor_1] [INFO]: pingMotor : DXL: Ping Error: [TxRxResult] There is no status packet! at ID:1
+[2024-07-19 15:14:23,822] [DXL_Conmunication] [WARNING]: createMotor : Motor 1 connect error
+[2024-07-19 15:14:23,859] [DXL_Conmunication .DXL_motor_2] [INFO]: directReadData : com_err_msg : [TxRxResult] There is no status packet! at ID: 2
+[2024-07-19 15:14:23,896] [DXL_Conmunication .DXL_motor_2] [INFO]: pingMotor : DXL: Ping Error: [TxRxResult] There is no status packet! at ID:2
+[2024-07-19 15:14:23,896] [DXL_Conmunication] [WARNING]: createMotor : Motor 2 connect error
+[2024-07-19 15:14:23,934] [DXL_Conmunication .DXL_motor_3] [INFO]: directReadData : com_err_msg : [TxRxResult] There is no status packet! at ID: 3
+[2024-07-19 15:14:23,970] [DXL_Conmunication .DXL_motor_3] [INFO]: pingMotor : DXL: Ping Error: [TxRxResult] There is no status packet! at ID:3
+[2024-07-19 15:14:23,971] [DXL_Conmunication] [WARNING]: createMotor : Motor 3 connect error
+[2024-07-19 15:14:24,008] [DXL_Conmunication .DXL_motor_4] [INFO]: directReadData : com_err_msg : [TxRxResult] There is no status packet! at ID: 4
+[2024-07-19 15:14:24,045] [DXL_Conmunication .DXL_motor_4] [INFO]: pingMotor : DXL: Ping Error: [TxRxResult] There is no status packet! at ID:4
+[2024-07-19 15:14:24,045] [DXL_Conmunication] [WARNING]: createMotor : Motor 4 connect error
+[2024-07-19 15:14:24,083] [DXL_Conmunication .DXL_motor_5] [INFO]: directReadData : com_err_msg : [TxRxResult] There is no status packet! at ID: 5
+[2024-07-19 15:14:24,119] [DXL_Conmunication .DXL_motor_5] [INFO]: pingMotor : DXL: Ping Error: [TxRxResult] There is no status packet! at ID:5
+[2024-07-19 15:14:24,120] [DXL_Conmunication] [WARNING]: createMotor : Motor 5 connect error
+[2024-07-19 15:14:24,157] [DXL_Conmunication .DXL_motor_6] [INFO]: directReadData : com_err_msg : [TxRxResult] There is no status packet! at ID: 6
+[2024-07-19 15:14:24,194] [DXL_Conmunication .DXL_motor_6] [INFO]: pingMotor : DXL: Ping Error: [TxRxResult] There is no status packet! at ID:6
+[2024-07-19 15:14:24,194] [DXL_Conmunication] [WARNING]: createMotor : Motor 6 connect error
+[2024-07-19 15:14:24,232] [DXL_Conmunication .DXL_motor_7] [INFO]: directReadData : com_err_msg : [TxRxResult] There is no status packet! at ID: 7
+[2024-07-19 15:14:24,269] [DXL_Conmunication .DXL_motor_7] [INFO]: pingMotor : DXL: Ping Error: [TxRxResult] There is no status packet! at ID:7
+[2024-07-19 15:14:24,269] [DXL_Conmunication] [WARNING]: createMotor : Motor 7 connect error
+[2024-07-19 15:14:24,306] [DXL_Conmunication .DXL_motor_8] [INFO]: directReadData : com_err_msg : [TxRxResult] There is no status packet! at ID: 8
+[2024-07-19 15:14:24,343] [DXL_Conmunication .DXL_motor_8] [INFO]: pingMotor : DXL: Ping Error: [TxRxResult] There is no status packet! at ID:8
+[2024-07-19 15:14:24,343] [DXL_Conmunication] [WARNING]: createMotor : Motor 8 connect error
+[2024-07-19 15:14:24,381] [DXL_Conmunication .DXL_motor_9] [INFO]: directReadData : com_err_msg : [TxRxResult] There is no status packet! at ID: 9
+[2024-07-19 15:14:24,418] [DXL_Conmunication .DXL_motor_9] [INFO]: pingMotor : DXL: Ping Error: [TxRxResult] There is no status packet! at ID:9
+[2024-07-19 15:14:24,418] [DXL_Conmunication] [WARNING]: createMotor : Motor 9 connect error
+[2024-07-19 15:14:24,455] [DXL_Conmunication .DXL_motor_10] [INFO]: directReadData : com_err_msg : [TxRxResult] There is no status packet! at ID: 10
+[2024-07-19 15:14:24,492] [DXL_Conmunication .DXL_motor_10] [INFO]: pingMotor : DXL: Ping Error: [TxRxResult] There is no status packet! at ID:10
+[2024-07-19 15:14:24,493] [DXL_Conmunication] [WARNING]: createMotor : Motor 10 connect error
+[2024-07-19 15:14:24,530] [DXL_Conmunication .DXL_motor_11] [INFO]: directReadData : com_err_msg : [TxRxResult] There is no status packet! at ID: 11
+[2024-07-19 15:14:24,567] [DXL_Conmunication .DXL_motor_11] [INFO]: pingMotor : DXL: Ping Error: [TxRxResult] There is no status packet! at ID:11
+[2024-07-19 15:14:24,567] [DXL_Conmunication] [WARNING]: createMotor : Motor 11 connect error
+[2024-07-19 15:14:27,569] [DXL_Conmunication] [WARNING]: updateMotorData : Failed: [TxRxResult] Protocol does not support this function!
+[2024-07-19 15:14:27,595] [DXL_Conmunication] [WARNING]: updateMotorData : Failed: [TxRxResult] Protocol does not support this function!
+[2024-07-19 15:14:51,538] [DXL_Conmunication] [INFO]: activateDXLConnection : Succeeded to open the port
+[2024-07-19 15:14:51,545] [DXL_Conmunication] [INFO]: activateDXLConnection : Succeeded to change the baudrate
+[2024-07-19 15:14:51,582] [DXL_Conmunication .DXL_motor_0] [INFO]: directReadData : com_err_msg : [TxRxResult] There is no status packet! at ID: 0
+[2024-07-19 15:14:51,619] [DXL_Conmunication .DXL_motor_0] [INFO]: pingMotor : DXL: Ping Error: [TxRxResult] There is no status packet! at ID:0
+[2024-07-19 15:14:51,620] [DXL_Conmunication] [WARNING]: createMotor : Motor 0 connect error
+[2024-07-19 15:14:51,657] [DXL_Conmunication .DXL_motor_1] [INFO]: directReadData : com_err_msg : [TxRxResult] There is no status packet! at ID: 1
+[2024-07-19 15:14:51,694] [DXL_Conmunication .DXL_motor_1] [INFO]: pingMotor : DXL: Ping Error: [TxRxResult] There is no status packet! at ID:1
+[2024-07-19 15:14:51,694] [DXL_Conmunication] [WARNING]: createMotor : Motor 1 connect error
+[2024-07-19 15:14:51,732] [DXL_Conmunication .DXL_motor_2] [INFO]: directReadData : com_err_msg : [TxRxResult] There is no status packet! at ID: 2
+[2024-07-19 15:14:51,769] [DXL_Conmunication .DXL_motor_2] [INFO]: pingMotor : DXL: Ping Error: [TxRxResult] There is no status packet! at ID:2
+[2024-07-19 15:14:51,769] [DXL_Conmunication] [WARNING]: createMotor : Motor 2 connect error
+[2024-07-19 15:14:51,806] [DXL_Conmunication .DXL_motor_3] [INFO]: directReadData : com_err_msg : [TxRxResult] There is no status packet! at ID: 3
+[2024-07-19 15:14:51,843] [DXL_Conmunication .DXL_motor_3] [INFO]: pingMotor : DXL: Ping Error: [TxRxResult] There is no status packet! at ID:3
+[2024-07-19 15:14:51,843] [DXL_Conmunication] [WARNING]: createMotor : Motor 3 connect error
+[2024-07-19 15:14:51,880] [DXL_Conmunication .DXL_motor_4] [INFO]: directReadData : com_err_msg : [TxRxResult] There is no status packet! at ID: 4
+[2024-07-19 15:14:51,917] [DXL_Conmunication .DXL_motor_4] [INFO]: pingMotor : DXL: Ping Error: [TxRxResult] There is no status packet! at ID:4
+[2024-07-19 15:14:51,917] [DXL_Conmunication] [WARNING]: createMotor : Motor 4 connect error
+[2024-07-19 15:14:51,954] [DXL_Conmunication .DXL_motor_5] [INFO]: directReadData : com_err_msg : [TxRxResult] There is no status packet! at ID: 5
+[2024-07-19 15:14:51,991] [DXL_Conmunication .DXL_motor_5] [INFO]: pingMotor : DXL: Ping Error: [TxRxResult] There is no status packet! at ID:5
+[2024-07-19 15:14:51,991] [DXL_Conmunication] [WARNING]: createMotor : Motor 5 connect error
+[2024-07-19 15:14:52,028] [DXL_Conmunication .DXL_motor_6] [INFO]: directReadData : com_err_msg : [TxRxResult] There is no status packet! at ID: 6
+[2024-07-19 15:14:52,065] [DXL_Conmunication .DXL_motor_6] [INFO]: pingMotor : DXL: Ping Error: [TxRxResult] There is no status packet! at ID:6
+[2024-07-19 15:14:52,065] [DXL_Conmunication] [WARNING]: createMotor : Motor 6 connect error
+[2024-07-19 15:14:52,103] [DXL_Conmunication .DXL_motor_7] [INFO]: directReadData : com_err_msg : [TxRxResult] There is no status packet! at ID: 7
+[2024-07-19 15:14:52,139] [DXL_Conmunication .DXL_motor_7] [INFO]: pingMotor : DXL: Ping Error: [TxRxResult] There is no status packet! at ID:7
+[2024-07-19 15:14:52,140] [DXL_Conmunication] [WARNING]: createMotor : Motor 7 connect error
+[2024-07-19 15:14:52,177] [DXL_Conmunication .DXL_motor_8] [INFO]: directReadData : com_err_msg : [TxRxResult] There is no status packet! at ID: 8
+[2024-07-19 15:14:52,214] [DXL_Conmunication .DXL_motor_8] [INFO]: pingMotor : DXL: Ping Error: [TxRxResult] There is no status packet! at ID:8
+[2024-07-19 15:14:52,214] [DXL_Conmunication] [WARNING]: createMotor : Motor 8 connect error
+[2024-07-19 15:14:52,251] [DXL_Conmunication .DXL_motor_9] [INFO]: directReadData : com_err_msg : [TxRxResult] There is no status packet! at ID: 9
+[2024-07-19 15:14:52,288] [DXL_Conmunication .DXL_motor_9] [INFO]: pingMotor : DXL: Ping Error: [TxRxResult] There is no status packet! at ID:9
+[2024-07-19 15:14:52,288] [DXL_Conmunication] [WARNING]: createMotor : Motor 9 connect error
+[2024-07-19 15:14:52,325] [DXL_Conmunication .DXL_motor_10] [INFO]: directReadData : com_err_msg : [TxRxResult] There is no status packet! at ID: 10
+[2024-07-19 15:14:52,362] [DXL_Conmunication .DXL_motor_10] [INFO]: pingMotor : DXL: Ping Error: [TxRxResult] There is no status packet! at ID:10
+[2024-07-19 15:14:52,362] [DXL_Conmunication] [WARNING]: createMotor : Motor 10 connect error
+[2024-07-19 15:14:52,399] [DXL_Conmunication .DXL_motor_11] [INFO]: directReadData : com_err_msg : [TxRxResult] There is no status packet! at ID: 11
+[2024-07-19 15:14:52,436] [DXL_Conmunication .DXL_motor_11] [INFO]: pingMotor : DXL: Ping Error: [TxRxResult] There is no status packet! at ID:11
+[2024-07-19 15:14:52,436] [DXL_Conmunication] [WARNING]: createMotor : Motor 11 connect error
+[2024-07-19 15:14:55,438] [DXL_Conmunication] [WARNING]: updateMotorData : Failed: [TxRxResult] Protocol does not support this function!
+[2024-07-19 15:14:55,510] [DXL_Conmunication] [WARNING]: updateMotorData : Failed: [TxRxResult] Protocol does not support this function!
+[2024-07-19 15:18:10,643] [DXL_Conmunication] [INFO]: activateDXLConnection : Succeeded to open the port
+[2024-07-19 15:18:10,650] [DXL_Conmunication] [INFO]: activateDXLConnection : Succeeded to change the baudrate
+[2024-07-19 15:18:10,687] [DXL_Conmunication .DXL_motor_0] [INFO]: directReadData : com_err_msg : [TxRxResult] There is no status packet! at ID: 0
+[2024-07-19 15:18:10,724] [DXL_Conmunication .DXL_motor_0] [INFO]: pingMotor : DXL: Ping Error: [TxRxResult] There is no status packet! at ID:0
+[2024-07-19 15:18:10,725] [DXL_Conmunication] [WARNING]: createMotor : Motor 0 connect error
+[2024-07-19 15:18:10,762] [DXL_Conmunication .DXL_motor_1] [INFO]: directReadData : com_err_msg : [TxRxResult] There is no status packet! at ID: 1
+[2024-07-19 15:18:10,799] [DXL_Conmunication .DXL_motor_1] [INFO]: pingMotor : DXL: Ping Error: [TxRxResult] There is no status packet! at ID:1
+[2024-07-19 15:18:10,800] [DXL_Conmunication] [WARNING]: createMotor : Motor 1 connect error
+[2024-07-19 15:18:10,837] [DXL_Conmunication .DXL_motor_2] [INFO]: directReadData : com_err_msg : [TxRxResult] There is no status packet! at ID: 2
+[2024-07-19 15:18:10,874] [DXL_Conmunication .DXL_motor_2] [INFO]: pingMotor : DXL: Ping Error: [TxRxResult] There is no status packet! at ID:2
+[2024-07-19 15:18:10,874] [DXL_Conmunication] [WARNING]: createMotor : Motor 2 connect error
+[2024-07-19 15:18:10,911] [DXL_Conmunication .DXL_motor_3] [INFO]: directReadData : com_err_msg : [TxRxResult] There is no status packet! at ID: 3
+[2024-07-19 15:18:10,948] [DXL_Conmunication .DXL_motor_3] [INFO]: pingMotor : DXL: Ping Error: [TxRxResult] There is no status packet! at ID:3
+[2024-07-19 15:18:10,948] [DXL_Conmunication] [WARNING]: createMotor : Motor 3 connect error
+[2024-07-19 15:18:10,985] [DXL_Conmunication .DXL_motor_4] [INFO]: directReadData : com_err_msg : [TxRxResult] There is no status packet! at ID: 4
+[2024-07-19 15:18:11,022] [DXL_Conmunication .DXL_motor_4] [INFO]: pingMotor : DXL: Ping Error: [TxRxResult] There is no status packet! at ID:4
+[2024-07-19 15:18:11,023] [DXL_Conmunication] [WARNING]: createMotor : Motor 4 connect error
+[2024-07-19 15:18:11,060] [DXL_Conmunication .DXL_motor_5] [INFO]: directReadData : com_err_msg : [TxRxResult] There is no status packet! at ID: 5
+[2024-07-19 15:18:11,097] [DXL_Conmunication .DXL_motor_5] [INFO]: pingMotor : DXL: Ping Error: [TxRxResult] There is no status packet! at ID:5
+[2024-07-19 15:18:11,097] [DXL_Conmunication] [WARNING]: createMotor : Motor 5 connect error
+[2024-07-19 15:18:11,134] [DXL_Conmunication .DXL_motor_6] [INFO]: directReadData : com_err_msg : [TxRxResult] There is no status packet! at ID: 6
+[2024-07-19 15:18:11,171] [DXL_Conmunication .DXL_motor_6] [INFO]: pingMotor : DXL: Ping Error: [TxRxResult] There is no status packet! at ID:6
+[2024-07-19 15:18:11,171] [DXL_Conmunication] [WARNING]: createMotor : Motor 6 connect error
+[2024-07-19 15:18:11,208] [DXL_Conmunication .DXL_motor_7] [INFO]: directReadData : com_err_msg : [TxRxResult] There is no status packet! at ID: 7
+[2024-07-19 15:18:11,245] [DXL_Conmunication .DXL_motor_7] [INFO]: pingMotor : DXL: Ping Error: [TxRxResult] There is no status packet! at ID:7
+[2024-07-19 15:18:11,245] [DXL_Conmunication] [WARNING]: createMotor : Motor 7 connect error
+[2024-07-19 15:18:11,283] [DXL_Conmunication .DXL_motor_8] [INFO]: directReadData : com_err_msg : [TxRxResult] There is no status packet! at ID: 8
+[2024-07-19 15:18:11,320] [DXL_Conmunication .DXL_motor_8] [INFO]: pingMotor : DXL: Ping Error: [TxRxResult] There is no status packet! at ID:8
+[2024-07-19 15:18:11,320] [DXL_Conmunication] [WARNING]: createMotor : Motor 8 connect error
+[2024-07-19 15:18:11,357] [DXL_Conmunication .DXL_motor_9] [INFO]: directReadData : com_err_msg : [TxRxResult] There is no status packet! at ID: 9
+[2024-07-19 15:18:11,394] [DXL_Conmunication .DXL_motor_9] [INFO]: pingMotor : DXL: Ping Error: [TxRxResult] There is no status packet! at ID:9
+[2024-07-19 15:18:11,394] [DXL_Conmunication] [WARNING]: createMotor : Motor 9 connect error
+[2024-07-19 15:18:11,432] [DXL_Conmunication .DXL_motor_10] [INFO]: directReadData : com_err_msg : [TxRxResult] There is no status packet! at ID: 10
+[2024-07-19 15:18:11,468] [DXL_Conmunication .DXL_motor_10] [INFO]: pingMotor : DXL: Ping Error: [TxRxResult] There is no status packet! at ID:10
+[2024-07-19 15:18:11,469] [DXL_Conmunication] [WARNING]: createMotor : Motor 10 connect error
+[2024-07-19 15:18:11,506] [DXL_Conmunication .DXL_motor_11] [INFO]: directReadData : com_err_msg : [TxRxResult] There is no status packet! at ID: 11
+[2024-07-19 15:18:11,543] [DXL_Conmunication .DXL_motor_11] [INFO]: pingMotor : DXL: Ping Error: [TxRxResult] There is no status packet! at ID:11
+[2024-07-19 15:18:11,543] [DXL_Conmunication] [WARNING]: createMotor : Motor 11 connect error
+[2024-07-19 15:18:14,546] [DXL_Conmunication] [WARNING]: updateMotorData : Failed: [TxRxResult] Protocol does not support this function!
+[2024-07-19 15:26:35,843] [DXL_Conmunication] [INFO]: activateDXLConnection : Succeeded to open the port
+[2024-07-19 15:26:35,850] [DXL_Conmunication] [INFO]: activateDXLConnection : Succeeded to change the baudrate
+[2024-07-19 15:26:35,886] [DXL_Conmunication .DXL_motor_0] [INFO]: pingMotor : [ID:000] ping Succeeded. Dynamixel model number : 1200
+[2024-07-19 15:26:35,918] [DXL_Conmunication .DXL_motor_1] [INFO]: pingMotor : [ID:001] ping Succeeded. Dynamixel model number : 1200
+[2024-07-19 15:26:35,950] [DXL_Conmunication .DXL_motor_2] [INFO]: pingMotor : [ID:002] ping Succeeded. Dynamixel model number : 1200
+[2024-07-19 15:26:35,982] [DXL_Conmunication .DXL_motor_3] [INFO]: pingMotor : [ID:003] ping Succeeded. Dynamixel model number : 1200
+[2024-07-19 15:26:36,014] [DXL_Conmunication .DXL_motor_4] [INFO]: pingMotor : [ID:004] ping Succeeded. Dynamixel model number : 1200
+[2024-07-19 15:26:36,046] [DXL_Conmunication .DXL_motor_5] [INFO]: pingMotor : [ID:005] ping Succeeded. Dynamixel model number : 1200
+[2024-07-19 15:26:36,078] [DXL_Conmunication .DXL_motor_6] [INFO]: pingMotor : [ID:006] ping Succeeded. Dynamixel model number : 1200
+[2024-07-19 15:26:36,110] [DXL_Conmunication .DXL_motor_7] [INFO]: pingMotor : [ID:007] ping Succeeded. Dynamixel model number : 1200
+[2024-07-19 15:26:36,142] [DXL_Conmunication .DXL_motor_8] [INFO]: pingMotor : [ID:008] ping Succeeded. Dynamixel model number : 1200
+[2024-07-19 15:26:36,174] [DXL_Conmunication .DXL_motor_9] [INFO]: pingMotor : [ID:009] ping Succeeded. Dynamixel model number : 1200
+[2024-07-19 15:26:36,206] [DXL_Conmunication .DXL_motor_10] [INFO]: pingMotor : [ID:010] ping Succeeded. Dynamixel model number : 1200
+[2024-07-19 15:26:36,238] [DXL_Conmunication .DXL_motor_11] [INFO]: pingMotor : [ID:011] ping Succeeded. Dynamixel model number : 1200
+[2024-07-19 15:26:36,254] [DXL_Conmunication .DXL_motor_0] [INFO]: rebootMotor : [ID:0] reboot Succeeded
+[2024-07-19 15:26:36,270] [DXL_Conmunication .DXL_motor_1] [INFO]: rebootMotor : [ID:1] reboot Succeeded
+[2024-07-19 15:26:36,286] [DXL_Conmunication .DXL_motor_2] [INFO]: rebootMotor : [ID:2] reboot Succeeded
+[2024-07-19 15:26:36,302] [DXL_Conmunication .DXL_motor_3] [INFO]: rebootMotor : [ID:3] reboot Succeeded
+[2024-07-19 15:26:36,318] [DXL_Conmunication .DXL_motor_4] [INFO]: rebootMotor : [ID:4] reboot Succeeded
+[2024-07-19 15:26:36,334] [DXL_Conmunication .DXL_motor_5] [INFO]: rebootMotor : [ID:5] reboot Succeeded
+[2024-07-19 15:26:36,350] [DXL_Conmunication .DXL_motor_6] [INFO]: rebootMotor : [ID:6] reboot Succeeded
+[2024-07-19 15:26:36,366] [DXL_Conmunication .DXL_motor_7] [INFO]: rebootMotor : [ID:7] reboot Succeeded
+[2024-07-19 15:26:36,382] [DXL_Conmunication .DXL_motor_8] [INFO]: rebootMotor : [ID:8] reboot Succeeded
+[2024-07-19 15:26:36,398] [DXL_Conmunication .DXL_motor_9] [INFO]: rebootMotor : [ID:9] reboot Succeeded
+[2024-07-19 15:26:36,414] [DXL_Conmunication .DXL_motor_10] [INFO]: rebootMotor : [ID:10] reboot Succeeded
+[2024-07-19 15:26:36,430] [DXL_Conmunication .DXL_motor_11] [INFO]: rebootMotor : [ID:11] reboot Succeeded
+[2024-07-19 15:26:39,660] [DXL_Conmunication] [WARNING]: updateMotorData : Failed: [TxRxResult] Incorrect status packet!
+[2024-07-19 15:26:47,923] [DXL_Conmunication] [INFO]: activateDXLConnection : Succeeded to open the port
+[2024-07-19 15:26:47,930] [DXL_Conmunication] [INFO]: activateDXLConnection : Succeeded to change the baudrate
+[2024-07-19 15:26:47,967] [DXL_Conmunication .DXL_motor_0] [INFO]: pingMotor : [ID:000] ping Succeeded. Dynamixel model number : 1200
+[2024-07-19 15:26:47,999] [DXL_Conmunication .DXL_motor_1] [INFO]: pingMotor : [ID:001] ping Succeeded. Dynamixel model number : 1200
+[2024-07-19 15:26:48,031] [DXL_Conmunication .DXL_motor_2] [INFO]: pingMotor : [ID:002] ping Succeeded. Dynamixel model number : 1200
+[2024-07-19 15:26:48,063] [DXL_Conmunication .DXL_motor_3] [INFO]: pingMotor : [ID:003] ping Succeeded. Dynamixel model number : 1200
+[2024-07-19 15:26:48,095] [DXL_Conmunication .DXL_motor_4] [INFO]: pingMotor : [ID:004] ping Succeeded. Dynamixel model number : 1200
+[2024-07-19 15:26:48,127] [DXL_Conmunication .DXL_motor_5] [INFO]: pingMotor : [ID:005] ping Succeeded. Dynamixel model number : 1200
+[2024-07-19 15:26:48,159] [DXL_Conmunication .DXL_motor_6] [INFO]: pingMotor : [ID:006] ping Succeeded. Dynamixel model number : 1200
+[2024-07-19 15:26:48,191] [DXL_Conmunication .DXL_motor_7] [INFO]: pingMotor : [ID:007] ping Succeeded. Dynamixel model number : 1200
+[2024-07-19 15:26:48,223] [DXL_Conmunication .DXL_motor_8] [INFO]: pingMotor : [ID:008] ping Succeeded. Dynamixel model number : 1200
+[2024-07-19 15:26:48,255] [DXL_Conmunication .DXL_motor_9] [INFO]: pingMotor : [ID:009] ping Succeeded. Dynamixel model number : 1200
+[2024-07-19 15:26:48,287] [DXL_Conmunication .DXL_motor_10] [INFO]: pingMotor : [ID:010] ping Succeeded. Dynamixel model number : 1200
+[2024-07-19 15:26:48,319] [DXL_Conmunication .DXL_motor_11] [INFO]: pingMotor : [ID:011] ping Succeeded. Dynamixel model number : 1200
+[2024-07-19 15:26:48,335] [DXL_Conmunication .DXL_motor_0] [INFO]: rebootMotor : [ID:0] reboot Succeeded
+[2024-07-19 15:26:48,351] [DXL_Conmunication .DXL_motor_1] [INFO]: rebootMotor : [ID:1] reboot Succeeded
+[2024-07-19 15:26:48,367] [DXL_Conmunication .DXL_motor_2] [INFO]: rebootMotor : [ID:2] reboot Succeeded
+[2024-07-19 15:26:48,383] [DXL_Conmunication .DXL_motor_3] [INFO]: rebootMotor : [ID:3] reboot Succeeded
+[2024-07-19 15:26:48,399] [DXL_Conmunication .DXL_motor_4] [INFO]: rebootMotor : [ID:4] reboot Succeeded
+[2024-07-19 15:26:48,415] [DXL_Conmunication .DXL_motor_5] [INFO]: rebootMotor : [ID:5] reboot Succeeded
+[2024-07-19 15:26:48,431] [DXL_Conmunication .DXL_motor_6] [INFO]: rebootMotor : [ID:6] reboot Succeeded
+[2024-07-19 15:26:48,447] [DXL_Conmunication .DXL_motor_7] [INFO]: rebootMotor : [ID:7] reboot Succeeded
+[2024-07-19 15:26:48,463] [DXL_Conmunication .DXL_motor_8] [INFO]: rebootMotor : [ID:8] reboot Succeeded
+[2024-07-19 15:26:48,479] [DXL_Conmunication .DXL_motor_9] [INFO]: rebootMotor : [ID:9] reboot Succeeded
+[2024-07-19 15:26:48,495] [DXL_Conmunication .DXL_motor_10] [INFO]: rebootMotor : [ID:10] reboot Succeeded
+[2024-07-19 15:26:48,511] [DXL_Conmunication .DXL_motor_11] [INFO]: rebootMotor : [ID:11] reboot Succeeded
+[2024-07-19 16:35:09,732] [DXL_Conmunication] [INFO]: activateDXLConnection : Succeeded to open the port
+[2024-07-19 16:35:09,739] [DXL_Conmunication] [INFO]: activateDXLConnection : Succeeded to change the baudrate
+[2024-07-19 16:35:09,775] [DXL_Conmunication .DXL_motor_0] [INFO]: pingMotor : [ID:000] ping Succeeded. Dynamixel model number : 1200
+[2024-07-19 16:35:09,807] [DXL_Conmunication .DXL_motor_1] [INFO]: pingMotor : [ID:001] ping Succeeded. Dynamixel model number : 1200
+[2024-07-19 16:35:09,839] [DXL_Conmunication .DXL_motor_2] [INFO]: pingMotor : [ID:002] ping Succeeded. Dynamixel model number : 1200
+[2024-07-19 16:35:09,871] [DXL_Conmunication .DXL_motor_3] [INFO]: pingMotor : [ID:003] ping Succeeded. Dynamixel model number : 1200
+[2024-07-19 16:35:09,903] [DXL_Conmunication .DXL_motor_4] [INFO]: pingMotor : [ID:004] ping Succeeded. Dynamixel model number : 1200
+[2024-07-19 16:35:09,935] [DXL_Conmunication .DXL_motor_5] [INFO]: pingMotor : [ID:005] ping Succeeded. Dynamixel model number : 1200
+[2024-07-19 16:35:09,967] [DXL_Conmunication .DXL_motor_6] [INFO]: pingMotor : [ID:006] ping Succeeded. Dynamixel model number : 1200
+[2024-07-19 16:35:09,999] [DXL_Conmunication .DXL_motor_7] [INFO]: pingMotor : [ID:007] ping Succeeded. Dynamixel model number : 1200
+[2024-07-19 16:35:10,031] [DXL_Conmunication .DXL_motor_8] [INFO]: pingMotor : [ID:008] ping Succeeded. Dynamixel model number : 1200
+[2024-07-19 16:35:10,063] [DXL_Conmunication .DXL_motor_9] [INFO]: pingMotor : [ID:009] ping Succeeded. Dynamixel model number : 1200
+[2024-07-19 16:35:10,095] [DXL_Conmunication .DXL_motor_10] [INFO]: pingMotor : [ID:010] ping Succeeded. Dynamixel model number : 1200
+[2024-07-19 16:35:10,127] [DXL_Conmunication .DXL_motor_11] [INFO]: pingMotor : [ID:011] ping Succeeded. Dynamixel model number : 1200
+[2024-07-19 16:35:10,143] [DXL_Conmunication .DXL_motor_0] [INFO]: rebootMotor : [ID:0] reboot Succeeded
+[2024-07-19 16:35:10,159] [DXL_Conmunication .DXL_motor_1] [INFO]: rebootMotor : [ID:1] reboot Succeeded
+[2024-07-19 16:35:10,175] [DXL_Conmunication .DXL_motor_2] [INFO]: rebootMotor : [ID:2] reboot Succeeded
+[2024-07-19 16:35:10,192] [DXL_Conmunication .DXL_motor_3] [INFO]: rebootMotor : [ID:3] reboot Succeeded
+[2024-07-19 16:35:10,207] [DXL_Conmunication .DXL_motor_4] [INFO]: rebootMotor : [ID:4] reboot Succeeded
+[2024-07-19 16:35:10,223] [DXL_Conmunication .DXL_motor_5] [INFO]: rebootMotor : [ID:5] reboot Succeeded
+[2024-07-19 16:35:10,240] [DXL_Conmunication .DXL_motor_6] [INFO]: rebootMotor : [ID:6] reboot Succeeded
+[2024-07-19 16:35:10,255] [DXL_Conmunication .DXL_motor_7] [INFO]: rebootMotor : [ID:7] reboot Succeeded
+[2024-07-19 16:35:10,271] [DXL_Conmunication .DXL_motor_8] [INFO]: rebootMotor : [ID:8] reboot Succeeded
+[2024-07-19 16:35:10,287] [DXL_Conmunication .DXL_motor_9] [INFO]: rebootMotor : [ID:9] reboot Succeeded
+[2024-07-19 16:35:10,303] [DXL_Conmunication .DXL_motor_10] [INFO]: rebootMotor : [ID:10] reboot Succeeded
+[2024-07-19 16:35:10,319] [DXL_Conmunication .DXL_motor_11] [INFO]: rebootMotor : [ID:11] reboot Succeeded
+[2024-07-19 16:47:09,609] [DXL_Conmunication] [INFO]: activateDXLConnection : Succeeded to open the port
+[2024-07-19 16:47:09,616] [DXL_Conmunication] [INFO]: activateDXLConnection : Succeeded to change the baudrate
+[2024-07-19 16:47:09,653] [DXL_Conmunication .DXL_motor_0] [INFO]: pingMotor : [ID:000] ping Succeeded. Dynamixel model number : 1200
+[2024-07-19 16:47:09,685] [DXL_Conmunication .DXL_motor_1] [INFO]: pingMotor : [ID:001] ping Succeeded. Dynamixel model number : 1200
+[2024-07-19 16:47:09,717] [DXL_Conmunication .DXL_motor_2] [INFO]: pingMotor : [ID:002] ping Succeeded. Dynamixel model number : 1200
+[2024-07-19 16:47:09,748] [DXL_Conmunication .DXL_motor_3] [INFO]: pingMotor : [ID:003] ping Succeeded. Dynamixel model number : 1200
+[2024-07-19 16:47:09,781] [DXL_Conmunication .DXL_motor_4] [INFO]: pingMotor : [ID:004] ping Succeeded. Dynamixel model number : 1200
+[2024-07-19 16:47:09,812] [DXL_Conmunication .DXL_motor_5] [INFO]: pingMotor : [ID:005] ping Succeeded. Dynamixel model number : 1200
+[2024-07-19 16:47:09,845] [DXL_Conmunication .DXL_motor_6] [INFO]: pingMotor : [ID:006] ping Succeeded. Dynamixel model number : 1200
+[2024-07-19 16:47:09,876] [DXL_Conmunication .DXL_motor_7] [INFO]: pingMotor : [ID:007] ping Succeeded. Dynamixel model number : 1200
+[2024-07-19 16:47:09,908] [DXL_Conmunication .DXL_motor_8] [INFO]: pingMotor : [ID:008] ping Succeeded. Dynamixel model number : 1200
+[2024-07-19 16:47:09,940] [DXL_Conmunication .DXL_motor_9] [INFO]: pingMotor : [ID:009] ping Succeeded. Dynamixel model number : 1200
+[2024-07-19 16:47:09,973] [DXL_Conmunication .DXL_motor_10] [INFO]: pingMotor : [ID:010] ping Succeeded. Dynamixel model number : 1200
+[2024-07-19 16:47:10,004] [DXL_Conmunication .DXL_motor_11] [INFO]: pingMotor : [ID:011] ping Succeeded. Dynamixel model number : 1200
+[2024-07-19 16:47:10,020] [DXL_Conmunication .DXL_motor_0] [INFO]: rebootMotor : [ID:0] reboot Succeeded
+[2024-07-19 16:47:10,036] [DXL_Conmunication .DXL_motor_1] [INFO]: rebootMotor : [ID:1] reboot Succeeded
+[2024-07-19 16:47:10,053] [DXL_Conmunication .DXL_motor_2] [INFO]: rebootMotor : [ID:2] reboot Succeeded
+[2024-07-19 16:47:10,069] [DXL_Conmunication .DXL_motor_3] [INFO]: rebootMotor : [ID:3] reboot Succeeded
+[2024-07-19 16:47:10,084] [DXL_Conmunication .DXL_motor_4] [INFO]: rebootMotor : [ID:4] reboot Succeeded
+[2024-07-19 16:47:10,100] [DXL_Conmunication .DXL_motor_5] [INFO]: rebootMotor : [ID:5] reboot Succeeded
+[2024-07-19 16:47:10,116] [DXL_Conmunication .DXL_motor_6] [INFO]: rebootMotor : [ID:6] reboot Succeeded
+[2024-07-19 16:47:10,132] [DXL_Conmunication .DXL_motor_7] [INFO]: rebootMotor : [ID:7] reboot Succeeded
+[2024-07-19 16:47:10,148] [DXL_Conmunication .DXL_motor_8] [INFO]: rebootMotor : [ID:8] reboot Succeeded
+[2024-07-19 16:47:10,164] [DXL_Conmunication .DXL_motor_9] [INFO]: rebootMotor : [ID:9] reboot Succeeded
+[2024-07-19 16:47:10,180] [DXL_Conmunication .DXL_motor_10] [INFO]: rebootMotor : [ID:10] reboot Succeeded
+[2024-07-19 16:47:10,196] [DXL_Conmunication .DXL_motor_11] [INFO]: rebootMotor : [ID:11] reboot Succeeded
+[2024-07-22 10:00:46,732] [DXL_Conmunication] [INFO]: activateDXLConnection : Succeeded to open the port
+[2024-07-22 10:00:46,739] [DXL_Conmunication] [INFO]: activateDXLConnection : Succeeded to change the baudrate
+[2024-07-22 10:00:46,776] [DXL_Conmunication .DXL_motor_0] [INFO]: pingMotor : [ID:000] ping Succeeded. Dynamixel model number : 1200
+[2024-07-22 10:00:46,808] [DXL_Conmunication .DXL_motor_1] [INFO]: pingMotor : [ID:001] ping Succeeded. Dynamixel model number : 1200
+[2024-07-22 10:00:46,840] [DXL_Conmunication .DXL_motor_2] [INFO]: pingMotor : [ID:002] ping Succeeded. Dynamixel model number : 1200
+[2024-07-22 10:00:46,872] [DXL_Conmunication .DXL_motor_3] [INFO]: pingMotor : [ID:003] ping Succeeded. Dynamixel model number : 1200
+[2024-07-22 10:00:46,904] [DXL_Conmunication .DXL_motor_4] [INFO]: pingMotor : [ID:004] ping Succeeded. Dynamixel model number : 1200
+[2024-07-22 10:00:46,936] [DXL_Conmunication .DXL_motor_5] [INFO]: pingMotor : [ID:005] ping Succeeded. Dynamixel model number : 1200
+[2024-07-22 10:00:46,968] [DXL_Conmunication .DXL_motor_6] [INFO]: pingMotor : [ID:006] ping Succeeded. Dynamixel model number : 1200
+[2024-07-22 10:00:47,000] [DXL_Conmunication .DXL_motor_7] [INFO]: pingMotor : [ID:007] ping Succeeded. Dynamixel model number : 1200
+[2024-07-22 10:00:47,032] [DXL_Conmunication .DXL_motor_8] [INFO]: pingMotor : [ID:008] ping Succeeded. Dynamixel model number : 1200
+[2024-07-22 10:00:47,064] [DXL_Conmunication .DXL_motor_9] [INFO]: pingMotor : [ID:009] ping Succeeded. Dynamixel model number : 1200
+[2024-07-22 10:00:47,096] [DXL_Conmunication .DXL_motor_10] [INFO]: pingMotor : [ID:010] ping Succeeded. Dynamixel model number : 1200
+[2024-07-22 10:00:47,128] [DXL_Conmunication .DXL_motor_11] [INFO]: pingMotor : [ID:011] ping Succeeded. Dynamixel model number : 1200
+[2024-07-22 10:00:47,144] [DXL_Conmunication .DXL_motor_0] [INFO]: rebootMotor : [ID:0] reboot Succeeded
+[2024-07-22 10:00:47,159] [DXL_Conmunication .DXL_motor_1] [INFO]: rebootMotor : [ID:1] reboot Succeeded
+[2024-07-22 10:00:47,175] [DXL_Conmunication .DXL_motor_2] [INFO]: rebootMotor : [ID:2] reboot Succeeded
+[2024-07-22 10:00:47,191] [DXL_Conmunication .DXL_motor_3] [INFO]: rebootMotor : [ID:3] reboot Succeeded
+[2024-07-22 10:00:47,207] [DXL_Conmunication .DXL_motor_4] [INFO]: rebootMotor : [ID:4] reboot Succeeded
+[2024-07-22 10:00:47,223] [DXL_Conmunication .DXL_motor_5] [INFO]: rebootMotor : [ID:5] reboot Succeeded
+[2024-07-22 10:00:47,239] [DXL_Conmunication .DXL_motor_6] [INFO]: rebootMotor : [ID:6] reboot Succeeded
+[2024-07-22 10:00:47,256] [DXL_Conmunication .DXL_motor_7] [INFO]: rebootMotor : [ID:7] reboot Succeeded
+[2024-07-22 10:00:47,271] [DXL_Conmunication .DXL_motor_8] [INFO]: rebootMotor : [ID:8] reboot Succeeded
+[2024-07-22 10:00:47,287] [DXL_Conmunication .DXL_motor_9] [INFO]: rebootMotor : [ID:9] reboot Succeeded
+[2024-07-22 10:00:47,303] [DXL_Conmunication .DXL_motor_10] [INFO]: rebootMotor : [ID:10] reboot Succeeded
+[2024-07-22 10:00:47,320] [DXL_Conmunication .DXL_motor_11] [INFO]: rebootMotor : [ID:11] reboot Succeeded
+[2024-07-22 11:45:13,209] [DXL_Conmunication] [INFO]: activateDXLConnection : Succeeded to open the port
+[2024-07-22 11:45:13,215] [DXL_Conmunication] [INFO]: activateDXLConnection : Succeeded to change the baudrate
+[2024-07-22 11:45:13,252] [DXL_Conmunication .DXL_motor_0] [INFO]: pingMotor : [ID:000] ping Succeeded. Dynamixel model number : 1200
+[2024-07-22 11:45:13,284] [DXL_Conmunication .DXL_motor_1] [INFO]: pingMotor : [ID:001] ping Succeeded. Dynamixel model number : 1200
+[2024-07-22 11:45:13,316] [DXL_Conmunication .DXL_motor_2] [INFO]: pingMotor : [ID:002] ping Succeeded. Dynamixel model number : 1200
+[2024-07-22 11:45:13,348] [DXL_Conmunication .DXL_motor_3] [INFO]: pingMotor : [ID:003] ping Succeeded. Dynamixel model number : 1200
+[2024-07-22 11:45:13,380] [DXL_Conmunication .DXL_motor_4] [INFO]: pingMotor : [ID:004] ping Succeeded. Dynamixel model number : 1200
+[2024-07-22 11:45:13,412] [DXL_Conmunication .DXL_motor_5] [INFO]: pingMotor : [ID:005] ping Succeeded. Dynamixel model number : 1200
+[2024-07-22 11:45:13,444] [DXL_Conmunication .DXL_motor_6] [INFO]: pingMotor : [ID:006] ping Succeeded. Dynamixel model number : 1200
+[2024-07-22 11:45:13,476] [DXL_Conmunication .DXL_motor_7] [INFO]: pingMotor : [ID:007] ping Succeeded. Dynamixel model number : 1200
+[2024-07-22 11:45:13,508] [DXL_Conmunication .DXL_motor_8] [INFO]: pingMotor : [ID:008] ping Succeeded. Dynamixel model number : 1200
+[2024-07-22 11:45:13,540] [DXL_Conmunication .DXL_motor_9] [INFO]: pingMotor : [ID:009] ping Succeeded. Dynamixel model number : 1200
+[2024-07-22 11:45:13,572] [DXL_Conmunication .DXL_motor_10] [INFO]: pingMotor : [ID:010] ping Succeeded. Dynamixel model number : 1200
+[2024-07-22 11:45:13,604] [DXL_Conmunication .DXL_motor_11] [INFO]: pingMotor : [ID:011] ping Succeeded. Dynamixel model number : 1200
+[2024-07-22 11:45:13,620] [DXL_Conmunication .DXL_motor_0] [INFO]: rebootMotor : [ID:0] reboot Succeeded
+[2024-07-22 11:45:13,636] [DXL_Conmunication .DXL_motor_1] [INFO]: rebootMotor : [ID:1] reboot Succeeded
+[2024-07-22 11:45:13,652] [DXL_Conmunication .DXL_motor_2] [INFO]: rebootMotor : [ID:2] reboot Succeeded
+[2024-07-22 11:45:13,668] [DXL_Conmunication .DXL_motor_3] [INFO]: rebootMotor : [ID:3] reboot Succeeded
+[2024-07-22 11:45:13,684] [DXL_Conmunication .DXL_motor_4] [INFO]: rebootMotor : [ID:4] reboot Succeeded
+[2024-07-22 11:45:13,700] [DXL_Conmunication .DXL_motor_5] [INFO]: rebootMotor : [ID:5] reboot Succeeded
+[2024-07-22 11:45:13,716] [DXL_Conmunication .DXL_motor_6] [INFO]: rebootMotor : [ID:6] reboot Succeeded
+[2024-07-22 11:45:13,732] [DXL_Conmunication .DXL_motor_7] [INFO]: rebootMotor : [ID:7] reboot Succeeded
+[2024-07-22 11:45:13,748] [DXL_Conmunication .DXL_motor_8] [INFO]: rebootMotor : [ID:8] reboot Succeeded
+[2024-07-22 11:45:13,764] [DXL_Conmunication .DXL_motor_9] [INFO]: rebootMotor : [ID:9] reboot Succeeded
+[2024-07-22 11:45:13,780] [DXL_Conmunication .DXL_motor_10] [INFO]: rebootMotor : [ID:10] reboot Succeeded
+[2024-07-22 11:45:13,796] [DXL_Conmunication .DXL_motor_11] [INFO]: rebootMotor : [ID:11] reboot Succeeded
+[2024-07-22 11:45:17,283] [DXL_Conmunication] [WARNING]: updateMotorData : Failed: [TxRxResult] Incorrect status packet!
+[2024-07-22 14:45:34,264] [DXL_Conmunication] [INFO]: activateDXLConnection : Succeeded to open the port
+[2024-07-22 14:45:34,271] [DXL_Conmunication] [INFO]: activateDXLConnection : Succeeded to change the baudrate
+[2024-07-22 14:45:34,307] [DXL_Conmunication .DXL_motor_0] [INFO]: pingMotor : [ID:000] ping Succeeded. Dynamixel model number : 1200
+[2024-07-22 14:45:34,339] [DXL_Conmunication .DXL_motor_1] [INFO]: pingMotor : [ID:001] ping Succeeded. Dynamixel model number : 1200
+[2024-07-22 14:45:34,371] [DXL_Conmunication .DXL_motor_2] [INFO]: pingMotor : [ID:002] ping Succeeded. Dynamixel model number : 1200
+[2024-07-22 14:45:34,403] [DXL_Conmunication .DXL_motor_3] [INFO]: pingMotor : [ID:003] ping Succeeded. Dynamixel model number : 1200
+[2024-07-22 14:45:34,435] [DXL_Conmunication .DXL_motor_4] [INFO]: pingMotor : [ID:004] ping Succeeded. Dynamixel model number : 1200
+[2024-07-22 14:45:34,467] [DXL_Conmunication .DXL_motor_5] [INFO]: pingMotor : [ID:005] ping Succeeded. Dynamixel model number : 1200
+[2024-07-22 14:45:34,499] [DXL_Conmunication .DXL_motor_6] [INFO]: pingMotor : [ID:006] ping Succeeded. Dynamixel model number : 1200
+[2024-07-22 14:45:34,531] [DXL_Conmunication .DXL_motor_7] [INFO]: pingMotor : [ID:007] ping Succeeded. Dynamixel model number : 1200
+[2024-07-22 14:45:34,563] [DXL_Conmunication .DXL_motor_8] [INFO]: pingMotor : [ID:008] ping Succeeded. Dynamixel model number : 1200
+[2024-07-22 14:45:34,595] [DXL_Conmunication .DXL_motor_9] [INFO]: pingMotor : [ID:009] ping Succeeded. Dynamixel model number : 1200
+[2024-07-22 14:45:34,627] [DXL_Conmunication .DXL_motor_10] [INFO]: pingMotor : [ID:010] ping Succeeded. Dynamixel model number : 1200
+[2024-07-22 14:45:34,659] [DXL_Conmunication .DXL_motor_11] [INFO]: pingMotor : [ID:011] ping Succeeded. Dynamixel model number : 1200
+[2024-07-22 14:45:34,675] [DXL_Conmunication .DXL_motor_0] [INFO]: rebootMotor : [ID:0] reboot Succeeded
+[2024-07-22 14:45:34,691] [DXL_Conmunication .DXL_motor_1] [INFO]: rebootMotor : [ID:1] reboot Succeeded
+[2024-07-22 14:45:34,707] [DXL_Conmunication .DXL_motor_2] [INFO]: rebootMotor : [ID:2] reboot Succeeded
+[2024-07-22 14:45:34,723] [DXL_Conmunication .DXL_motor_3] [INFO]: rebootMotor : [ID:3] reboot Succeeded
+[2024-07-22 14:45:34,739] [DXL_Conmunication .DXL_motor_4] [INFO]: rebootMotor : [ID:4] reboot Succeeded
+[2024-07-22 14:45:34,755] [DXL_Conmunication .DXL_motor_5] [INFO]: rebootMotor : [ID:5] reboot Succeeded
+[2024-07-22 14:45:34,771] [DXL_Conmunication .DXL_motor_6] [INFO]: rebootMotor : [ID:6] reboot Succeeded
+[2024-07-22 14:45:34,787] [DXL_Conmunication .DXL_motor_7] [INFO]: rebootMotor : [ID:7] reboot Succeeded
+[2024-07-22 14:45:34,803] [DXL_Conmunication .DXL_motor_8] [INFO]: rebootMotor : [ID:8] reboot Succeeded
+[2024-07-22 14:45:34,819] [DXL_Conmunication .DXL_motor_9] [INFO]: rebootMotor : [ID:9] reboot Succeeded
+[2024-07-22 14:45:34,835] [DXL_Conmunication .DXL_motor_10] [INFO]: rebootMotor : [ID:10] reboot Succeeded
+[2024-07-22 14:45:34,851] [DXL_Conmunication .DXL_motor_11] [INFO]: rebootMotor : [ID:11] reboot Succeeded
+[2024-07-22 14:59:31,799] [DXL_Conmunication] [INFO]: activateDXLConnection : Succeeded to open the port
+[2024-07-22 14:59:31,806] [DXL_Conmunication] [INFO]: activateDXLConnection : Succeeded to change the baudrate
+[2024-07-22 14:59:31,842] [DXL_Conmunication .DXL_motor_0] [INFO]: pingMotor : [ID:000] ping Succeeded. Dynamixel model number : 1200
+[2024-07-22 14:59:31,874] [DXL_Conmunication .DXL_motor_1] [INFO]: pingMotor : [ID:001] ping Succeeded. Dynamixel model number : 1200
+[2024-07-22 14:59:31,906] [DXL_Conmunication .DXL_motor_2] [INFO]: pingMotor : [ID:002] ping Succeeded. Dynamixel model number : 1200
+[2024-07-22 14:59:31,938] [DXL_Conmunication .DXL_motor_3] [INFO]: pingMotor : [ID:003] ping Succeeded. Dynamixel model number : 1200
+[2024-07-22 14:59:31,970] [DXL_Conmunication .DXL_motor_4] [INFO]: pingMotor : [ID:004] ping Succeeded. Dynamixel model number : 1200
+[2024-07-22 14:59:32,002] [DXL_Conmunication .DXL_motor_5] [INFO]: pingMotor : [ID:005] ping Succeeded. Dynamixel model number : 1200
+[2024-07-22 14:59:32,034] [DXL_Conmunication .DXL_motor_6] [INFO]: pingMotor : [ID:006] ping Succeeded. Dynamixel model number : 1200
+[2024-07-22 14:59:32,066] [DXL_Conmunication .DXL_motor_7] [INFO]: pingMotor : [ID:007] ping Succeeded. Dynamixel model number : 1200
+[2024-07-22 14:59:32,098] [DXL_Conmunication .DXL_motor_8] [INFO]: pingMotor : [ID:008] ping Succeeded. Dynamixel model number : 1200
+[2024-07-22 14:59:32,130] [DXL_Conmunication .DXL_motor_9] [INFO]: pingMotor : [ID:009] ping Succeeded. Dynamixel model number : 1200
+[2024-07-22 14:59:32,162] [DXL_Conmunication .DXL_motor_10] [INFO]: pingMotor : [ID:010] ping Succeeded. Dynamixel model number : 1200
+[2024-07-22 14:59:32,194] [DXL_Conmunication .DXL_motor_11] [INFO]: pingMotor : [ID:011] ping Succeeded. Dynamixel model number : 1200
+[2024-07-22 14:59:32,210] [DXL_Conmunication .DXL_motor_0] [INFO]: rebootMotor : [ID:0] reboot Succeeded
+[2024-07-22 14:59:32,226] [DXL_Conmunication .DXL_motor_1] [INFO]: rebootMotor : [ID:1] reboot Succeeded
+[2024-07-22 14:59:32,242] [DXL_Conmunication .DXL_motor_2] [INFO]: rebootMotor : [ID:2] reboot Succeeded
+[2024-07-22 14:59:32,258] [DXL_Conmunication .DXL_motor_3] [INFO]: rebootMotor : [ID:3] reboot Succeeded
+[2024-07-22 14:59:32,274] [DXL_Conmunication .DXL_motor_4] [INFO]: rebootMotor : [ID:4] reboot Succeeded
+[2024-07-22 14:59:32,290] [DXL_Conmunication .DXL_motor_5] [INFO]: rebootMotor : [ID:5] reboot Succeeded
+[2024-07-22 14:59:32,306] [DXL_Conmunication .DXL_motor_6] [INFO]: rebootMotor : [ID:6] reboot Succeeded
+[2024-07-22 14:59:32,322] [DXL_Conmunication .DXL_motor_7] [INFO]: rebootMotor : [ID:7] reboot Succeeded
+[2024-07-22 14:59:32,338] [DXL_Conmunication .DXL_motor_8] [INFO]: rebootMotor : [ID:8] reboot Succeeded
+[2024-07-22 14:59:32,354] [DXL_Conmunication .DXL_motor_9] [INFO]: rebootMotor : [ID:9] reboot Succeeded
+[2024-07-22 14:59:32,370] [DXL_Conmunication .DXL_motor_10] [INFO]: rebootMotor : [ID:10] reboot Succeeded
+[2024-07-22 14:59:32,386] [DXL_Conmunication .DXL_motor_11] [INFO]: rebootMotor : [ID:11] reboot Succeeded
+[2024-07-22 15:32:57,484] [DXL_Conmunication] [INFO]: activateDXLConnection : Succeeded to open the port
+[2024-07-22 15:32:57,491] [DXL_Conmunication] [INFO]: activateDXLConnection : Succeeded to change the baudrate
+[2024-07-22 15:32:57,528] [DXL_Conmunication .DXL_motor_0] [INFO]: pingMotor : [ID:000] ping Succeeded. Dynamixel model number : 1200
+[2024-07-22 15:32:57,560] [DXL_Conmunication .DXL_motor_1] [INFO]: pingMotor : [ID:001] ping Succeeded. Dynamixel model number : 1200
+[2024-07-22 15:32:57,592] [DXL_Conmunication .DXL_motor_2] [INFO]: pingMotor : [ID:002] ping Succeeded. Dynamixel model number : 1200
+[2024-07-22 15:32:57,624] [DXL_Conmunication .DXL_motor_3] [INFO]: pingMotor : [ID:003] ping Succeeded. Dynamixel model number : 1200
+[2024-07-22 15:32:57,656] [DXL_Conmunication .DXL_motor_4] [INFO]: pingMotor : [ID:004] ping Succeeded. Dynamixel model number : 1200
+[2024-07-22 15:32:57,688] [DXL_Conmunication .DXL_motor_5] [INFO]: pingMotor : [ID:005] ping Succeeded. Dynamixel model number : 1200
+[2024-07-22 15:32:57,720] [DXL_Conmunication .DXL_motor_6] [INFO]: pingMotor : [ID:006] ping Succeeded. Dynamixel model number : 1200
+[2024-07-22 15:32:57,752] [DXL_Conmunication .DXL_motor_7] [INFO]: pingMotor : [ID:007] ping Succeeded. Dynamixel model number : 1200
+[2024-07-22 15:32:57,784] [DXL_Conmunication .DXL_motor_8] [INFO]: pingMotor : [ID:008] ping Succeeded. Dynamixel model number : 1200
+[2024-07-22 15:32:57,816] [DXL_Conmunication .DXL_motor_9] [INFO]: pingMotor : [ID:009] ping Succeeded. Dynamixel model number : 1200
+[2024-07-22 15:32:57,848] [DXL_Conmunication .DXL_motor_10] [INFO]: pingMotor : [ID:010] ping Succeeded. Dynamixel model number : 1200
+[2024-07-22 15:32:57,880] [DXL_Conmunication .DXL_motor_11] [INFO]: pingMotor : [ID:011] ping Succeeded. Dynamixel model number : 1200
+[2024-07-22 15:32:57,896] [DXL_Conmunication .DXL_motor_0] [INFO]: rebootMotor : [ID:0] reboot Succeeded
+[2024-07-22 15:32:57,912] [DXL_Conmunication .DXL_motor_1] [INFO]: rebootMotor : [ID:1] reboot Succeeded
+[2024-07-22 15:32:57,928] [DXL_Conmunication .DXL_motor_2] [INFO]: rebootMotor : [ID:2] reboot Succeeded
+[2024-07-22 15:32:57,944] [DXL_Conmunication .DXL_motor_3] [INFO]: rebootMotor : [ID:3] reboot Succeeded
+[2024-07-22 15:32:57,960] [DXL_Conmunication .DXL_motor_4] [INFO]: rebootMotor : [ID:4] reboot Succeeded
+[2024-07-22 15:32:57,976] [DXL_Conmunication .DXL_motor_5] [INFO]: rebootMotor : [ID:5] reboot Succeeded
+[2024-07-22 15:32:57,992] [DXL_Conmunication .DXL_motor_6] [INFO]: rebootMotor : [ID:6] reboot Succeeded
+[2024-07-22 15:32:58,008] [DXL_Conmunication .DXL_motor_7] [INFO]: rebootMotor : [ID:7] reboot Succeeded
+[2024-07-22 15:32:58,024] [DXL_Conmunication .DXL_motor_8] [INFO]: rebootMotor : [ID:8] reboot Succeeded
+[2024-07-22 15:32:58,040] [DXL_Conmunication .DXL_motor_9] [INFO]: rebootMotor : [ID:9] reboot Succeeded
+[2024-07-22 15:32:58,056] [DXL_Conmunication .DXL_motor_10] [INFO]: rebootMotor : [ID:10] reboot Succeeded
+[2024-07-22 15:32:58,072] [DXL_Conmunication .DXL_motor_11] [INFO]: rebootMotor : [ID:11] reboot Succeeded

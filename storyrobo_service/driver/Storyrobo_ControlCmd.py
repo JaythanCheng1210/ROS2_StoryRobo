@@ -38,13 +38,14 @@ LED_OFF = 0
 class ControlCmd:
     def __init__(self):
 
-        self.record_path = '/home/storyrobo/storyrobo_ws/ROS2_StoryRobo/storyrobo_service/driver/data/joint.json'
-        self.audio_store_path = '/home/storyrobo/storyrobo_ws/ROS2_StoryRobo/storyrobo_service/driver/data'
+        self.record_path = '/home/storyrobo/storyrobo_ws/ROS2_StoryRobo/storyrobo_service/driver/data_local/joint.json'
+        self.audio_store_path = '/home/storyrobo/storyrobo_ws/ROS2_StoryRobo/storyrobo_service/driver/data_local'
         self.audio_path = os.path.join(self.audio_store_path, 'output.wav')
 
         self.recording = False
         self.replaying = False
         self.is_recording = False
+        self.is_recording_audio = False
         self.is_replaying = False
         
         self.dynamixel = DXL_Conmunication(DEVICE_NAME, B_RATE)
@@ -94,7 +95,7 @@ class ControlCmd:
             while abs(position) > 4095:
                 position = position - (position/abs(position)) * 4095
             self.motor_position[motor.name] = int(position*360/4095)
-            print(self.motor_position)
+            # print(self.motor_position)
         
         return self.motor_position   
     
@@ -108,8 +109,8 @@ class ControlCmd:
     
     # The process of the recording function
     def process_record_action_points(self):
-        self.disable_all_motor()
-        print("disabling")
+        # self.disable_all_motor()
+        # print("disabling")
         # self.dynamixel.rebootAllMotor()
         # print("rebooting")
         self.motor_led_control(LED_ON)
@@ -132,13 +133,18 @@ class ControlCmd:
 
         self.recording_thread.start()
         self.record_audio_thread.start()
+    
+    def start_record_audio_action_points(self):
+        self.is_recording_audio = True
+        self.record_audio_thread = threading.Thread(target=self.record_audio, args=(self.audio_path, ), daemon=True)
+        self.record_audio_thread.start()
 
     # Stop recording
     def stop_record_action_points(self):
         self.is_recording = False
+        self.is_recording_audio = False
+
     
-    def stop_replaying(self):
-        sys.exit()
 
 
     # Replay the recording file
@@ -203,12 +209,12 @@ class ControlCmd:
         print("Start recording audio...")
         frames = []
         
-        while self.is_recording:
+        while self.is_recording == True or self.is_recording_audio == True:
             data = stream.read(FRAMES_PER_BUFFER)
             frames.append(data)
             
             # Check for event to stop recording
-            if not self.is_recording:
+            if self.is_recording == False and self.is_recording_audio == False:
                 break
 
         print("Stop recording audio!")
@@ -240,7 +246,7 @@ if __name__ == "__main__":
     controlcmd = ControlCmd()
 
     # while True:
-    #     print("Press any key to continue! (or press ESC to quit!)")
+    #     print("Press any key to continue! (or press ESC to quit!)") 
     #     if getch() == chr(0x1b):
     #         break
     #     all_servo_position = controlcmd.read_motor_data()

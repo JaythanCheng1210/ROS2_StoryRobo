@@ -6,7 +6,6 @@ import json
 
 sys.path.append('/home/storyrobo/storyrobo_ws/ROS2_StoryRobo/storyrobo_service/driver')
 from Storyrobo_ControlCmd import ControlCmd  # type: ignore
-
 controlcmd = ControlCmd()
 
 # Create a new Socket.IO client
@@ -17,16 +16,15 @@ send_real_time_data = False
 replay_mode = False
 
 
+@sio.event
+def connect():
+    print('Connected to server')
+
 def send_real_time_data_continuously():
     global send_real_time_data
     while send_real_time_data:
         message = controlcmd.read_all_motor_data()
         sio.emit('EchoBotMotor', message)
-
-
-@sio.event
-def connect():
-    print('Connected to server')
 
 
 @sio.on('ReplayOnEchoBot')

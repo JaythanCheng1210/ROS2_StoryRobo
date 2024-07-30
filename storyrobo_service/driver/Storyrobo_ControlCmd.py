@@ -136,6 +136,9 @@ class ControlCmd:
     # Stop recording
     def stop_record_action_points(self):
         self.is_recording = False
+    
+    def stop_replaying(self):
+        sys.exit()
 
 
     # Replay the recording file
@@ -162,6 +165,7 @@ class ControlCmd:
                                                         "motor11": int((one_action_point["motor11"] * 4095) / 360)})
                 time.sleep(0.3)
                 one_action_point = f.readline()
+        self.replaying = False
         self.disable_all_motor() 
     
     def real_time_replay(self, joint):

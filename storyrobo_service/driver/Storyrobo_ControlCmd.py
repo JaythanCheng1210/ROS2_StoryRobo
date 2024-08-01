@@ -8,6 +8,7 @@ import threading
 
 #For audio
 import pyaudio
+import pygame
 import wave
 import sounddevice as sd
 import soundfile as sf
@@ -47,7 +48,10 @@ class ControlCmd:
         self.is_recording = False
         self.is_recording_audio = False
         self.is_replaying = False
-        
+        self.send_real_time_data= False
+
+        pygame.mixer.init()
+        self.stop_replay_event = threading.Event()
         self.dynamixel = DXL_Conmunication(DEVICE_NAME, B_RATE)
         self.dynamixel.activateDXLConnection()
         motor0 = self.dynamixel.createMotor('motor0', motor_number=0)
@@ -88,7 +92,7 @@ class ControlCmd:
         return led_on
     
     def read_all_motor_data(self):
-        self.dynamixel.updateMotorData()
+        # self.dynamixel.updateMotorData()
         for motor in self.motor_list:
             position, _ = motor.directReadData(132, 4)
             # print("motor id:", motor.DXL_ID, "motor position:", position)
@@ -144,16 +148,14 @@ class ControlCmd:
         self.is_recording = False
         self.is_recording_audio = False
 
-    
-
 
     # Replay the recording file
     def replay_recorded_data(self):
         self.enable_all_motor()
-        time.sleep(0.55)
+        time.sleep(0.2)
         with open(self.record_path) as f: 
             one_action_point = f.readline()
-            while one_action_point:
+            while one_action_point and (not self.stop_replay_event.is_set()):
                 one_action_point = json.loads(one_action_point) 
                 print(one_action_point)
 
@@ -169,10 +171,11 @@ class ControlCmd:
                                                         "motor9": int((one_action_point["motor9"] * 4095) / 360),
                                                         "motor10": int((one_action_point["motor10"] * 4095) / 360),
                                                         "motor11": int((one_action_point["motor11"] * 4095) / 360)})
-                time.sleep(0.3)
+                time.sleep(0.08)
                 one_action_point = f.readline()
         self.replaying = False
-        self.disable_all_motor() 
+        self.disable_all_motor()
+        self.send_real_time_data = True 
     
     def real_time_replay(self, joint):
         self.motor_position_control(position = {    "motor0": int((joint["motor0"] * 4095) / 360),
@@ -234,13 +237,26 @@ class ControlCmd:
         return
 
     def replay_audio(self):
-        playsound('/home/storyrobo/storyrobo_ws/ROS2_StoryRobo/storyrobo_service/driver/data/output.wav')
+        pygame.mixer.music.load('/home/storyrobo/storyrobo_ws/ROS2_StoryRobo/storyrobo_service/driver/data_local/output.wav')
+        pygame.mixer.music.play()
+        while pygame.mixer.music.get_busy():
+            if self.stop_replay_event.is_set():
+                pygame.mixer.music.stop()
+                break
+            time.sleep(0.1)  # Sleep for a short duration to avoid busy-waiting
 
     def replay_all(self):
+        self.stop_replay_event.clear()
         self.replay_movement_thread = threading.Thread(target=self.replay_recorded_data)
         self.replay_audio_thread = threading.Thread(target=self.replay_audio)
         self.replay_movement_thread.start()
         self.replay_audio_thread.start()
+        self.send_real_time_data = True
+
+    def stop_replay_all(self):
+        self.stop_replay_event.set()  # Signal threads to stop
+        self.replay_movement_thread.join()  # Wait for the thread to finish
+        self.replay_audio_thread.join() 
         
 if __name__ == "__main__":
     controlcmd = ControlCmd()
@@ -257,7 +273,7 @@ if __name__ == "__main__":
         "read":controlcmd.read_all_motor_data,
         "record":controlcmd.start_record_action_points,
         "stop":controlcmd.stop_record_action_points,
-        "replay":controlcmd.replay_all,
+        "replay":controlcmd.replay_audio,
         "disable":controlcmd.disable_all_motor,
         # "rcaudio":controlcmd.record_audio,
         # "rpaudio":controlcmd.replay_audio,

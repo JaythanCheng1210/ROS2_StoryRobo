@@ -28,6 +28,8 @@ git clone https://github.com/JaythanCheng1210/ROS2_StoryRobo.git
 sudo apt install python3-pip
 sudo apt install python3-pyaudio
 sudo pip3 install Jetson.GPIO
+sudo pip3 install pygame
+
 sudo pip3 install sounddevice
 sudo pip3 install soundfile
 ```
@@ -43,9 +45,12 @@ cd /DynamixlSDK/python && sudo python setup.py install
 
 - cd storyrobo_ws build: 
 ```
+source /opt/ros/foxy/setup.bash
+source install/local_setup.bash
+```
+```
 colcon build
 ```
-
 
 ### Start
 ```

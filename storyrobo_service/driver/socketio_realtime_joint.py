@@ -71,7 +71,7 @@ def disconnect():
 if __name__ == '__main__':
     while True:
         try:
-            sio.connect('http://10.100.3.116:5000')
+            sio.connect('http://10.100.2.48:5000')
             sio.wait()
         except socketio.exceptions.ConnectionError:
             print('Waiting for connection ~')

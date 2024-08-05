@@ -13,7 +13,7 @@
 
 - GPIO Button
 
-<img src="https://u.fmyeah.com/i15/668e4f2c70084.jpeg" width="500"/>
+<img src="https://u.fmyeah.com/i15/66b04dc8c9a2b.jpeg" width="500"/>
 
 
 ### Environment setup
@@ -53,6 +53,11 @@ colcon build
 ```
 
 ### Start
+- cd 
+```
+./start.sh
+```
+- cd /storyrobo_ws
 ```
 ros2 launch storyrobo_service storyrobo.launch.py
 ```

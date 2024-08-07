@@ -18,26 +18,4 @@ def generate_launch_description():
             name='rec_rep_service_server',
             output='screen'
         ),
-        # TimerAction(
-        #     period=4.5,
-        #     actions=[
-        #         Node(
-        #             package='storyrobo_service',
-        #             executable='replay_service_server',
-        #             name='replay_service_server',
-        #             output='screen'
-        #         ),
-        #     ]
-        # ),
-        # TimerAction(
-        #     period=8.5,
-        #     actions=[
-        #         Node(
-        #             package='storyrobo_service',
-        #             executable='record_service_server',
-        #             name='record_service_server',
-        #             output='screen'
-        #         ),
-        #     ]
-        # )
     ])

@@ -16,6 +16,9 @@
 <img src="https://u.fmyeah.com/i15/66b04dc8c9a2b.jpeg" width="500"/>
 
 
+
+### Hardware device fixed
+- [Mircrophone & Speaker fixed](https://hackmd.io/@a69cdKhTRl6jAL9u9oczBQ/HJT4-Y5DC)
 ### Environment setup
 - [JETSON-ORIN-NANO-DEV-KIT Burning Systems Details](https://blog.cavedu.com/2023/05/09/jetson-orin-nano-boot/)
 ```
